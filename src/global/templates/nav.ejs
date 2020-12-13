@@ -30,6 +30,7 @@
       'bg-transparent': !open,
       'h-0': !open
     }"
+    x-on:click="open = false"
   ></div>
   <div class="relative sm:hidden">
     <div
@@ -48,18 +49,18 @@
     >
       <div class="relative">
         <div
-          style="width: min(200%, 800px); padding-top: min(200%, 800px)"
-          class="w-full bg-white rounded-full absolute -top-12 left-1/2 transform -translate-x-1/2 -translate-y-1/2 shadow-2xl"
+          style="width: min(220%, 800px); padding-top: min(220%, 800px)"
+          class="w-full bg-white rounded-full absolute -top-12 left-1/2 transform -translate-x-1/2 -translate-y-1/2 shadow-2xl flex justify-center pointer-events-none"
         >
-          <div class="relative">
-            <img class="w-auto h-12 absolute left-1/2 bottom-12 transform -translate-x-1/2" src="images/nexon.png">
+          <div class="relative w-screen">
+            <img class="w-2/5 h-auto absolute left-1/2 bottom-7 transform -translate-x-1/2" src="images/nexon.png">
           </div>
         </div>
         <ul class="flex flex-wrap justify-center text-xl font-thin">
           <% data.navItems.forEach((item) => { %>
           <li class="w-1/2 h-14">
             <a
-              class="h-full px-4 flex justify-center items-center hover:bg-main-transparent-black transition-colors"
+              class="w-full h-full px-4 flex justify-center items-center"
               href="<%= item.href %>"
             >
               <span class="relative"
