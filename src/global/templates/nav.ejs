@@ -23,10 +23,12 @@
     <% }) %>
   </ul>
   <div
-    class="w-screen h-screen fixed sm:hidden transition-colors duration-1000"
+    class="w-screen  fixed sm:hidden transition-colors duration-1000"
     x-bind:class="{ 
       'bg-main-transparent-black': open,
-      'bg-transparent': !open
+      'h-screen': open,
+      'bg-transparent': !open,
+      'h-0': !open
     }"
   ></div>
   <div class="relative sm:hidden">
