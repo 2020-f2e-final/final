@@ -2,11 +2,11 @@
   <ul
     class="hidden sm:flex flex-wrap justify-center px-14 xl:p-0 bg-main-faded-blue text-white text-xl font-thin"
   >
-    <li class="w-full xl:w-auto xl:mr-32 h-14 flex justify-center items-center">
+    <li class="w-full xl:w-auto xl:mr-32 h-16 flex justify-center items-center">
       <a href="index.html"><img class="h-8" src="images/logo.png" /></a>
     </li>
     <% data.navItems.forEach((item) => { %>
-    <li class="w-1/4 xl:w-auto h-14">
+    <li class="w-1/4 xl:w-auto h-16">
       <a
         class="h-full px-4 flex justify-center items-center hover:bg-main-transparent-white transition-colors"
         href="<%= item.href %>"
@@ -34,7 +34,7 @@
   ></div>
   <div class="relative sm:hidden">
     <div
-      class="relative h-14 flex justify-center items-center bg-main-faded-blue z-10"
+      class="relative h-16 flex justify-center items-center bg-main-faded-blue z-10"
     >
       <span
         class="mdi mdi-menu text-4xl text-white absolute top-auto bottom-auto left-4 cursor-pointer"
@@ -58,7 +58,7 @@
         </div>
         <ul class="flex flex-wrap justify-center text-xl font-thin">
           <% data.navItems.forEach((item) => { %>
-          <li class="w-1/2 h-14">
+          <li class="w-1/2 h-16">
             <a
               class="w-full h-full px-4 flex justify-center items-center"
               href="<%= item.href %>"
