@@ -1,0 +1,86 @@
+<div class="w-11/12 xl:w-2/3 mx-auto mt-14 rounded-3xl overflow-hidden">
+  <div class="flex justify-center items-center bg-main-faded-blue h-10 sm:h-16">
+    <p class="text-white text-xl sm:text-3xl font-thin">遊戲畫面</p>
+  </div>
+
+  <div
+    x-data="slidesComponent()"
+    x-init="init"
+    x-on:mouseenter="hover = true"
+    x-on:mouseleave="hover = false"
+    class="relative bg-main-light-blue-grey"
+  >
+    <div class="w-full" style="padding-top: 50%"></div>
+    <div
+      class="w-full h-full absolute top-0 whitespace-nowrap transition-all duration-1000"
+      :style="`font-size: 0; left: -${currentIndex * 100}%;`"
+    >
+      <% data.slides.forEach((img) => { %>
+      <span
+        class="inline-block w-full h-full bg-no-repeat bg-cover bg-center"
+        style="background-image: url('<%= img %>')"
+      ></span>
+      <% }) %>
+    </div>
+    <div
+      class="absolute bottom-0 left-0 flex justify-center items-center w-full h-8 bg-gradient-to-t from-black to-transparent"
+    >
+      <% data.slides.forEach((_, i) => { %>
+      <div class="flex justify-center items-center w-6 h-6 cursor-pointer" x-on:click="setIndex(<%= i %>)">
+        <div
+          class="w-2 h-2 rounded-full"
+          :class="currentIndex === <%= i %> ? 'bg-white' : 'bg-main-transparent-white'"
+        ></div>
+      </div>
+      <% }) %>
+    </div>
+    <div
+      class="absolute top-0 left-0 flex justify-center items-center w-20 sm:w-32 h-full text-white text-7xl sm:text-9xl bg-gradient-to-r from-black to-transparent transition-opacity duration-500 cursor-pointer"
+      :class="{
+        'opacity-0': !hover,
+        'opacity-50': hover
+      }"
+      x-on:click="prev"
+    >
+      <span class="mdi mdi-chevron-left"></span>
+    </div>
+    <div
+      class="absolute top-0 right-0 flex justify-center items-center w-20 sm:w-32 h-full text-white text-7xl sm:text-9xl bg-gradient-to-l from-black to-transparent transition-opacity duration-500 cursor-pointer"
+      :class="{
+        'opacity-0': !hover,
+        'opacity-50': hover
+      }"
+      x-on:click="next"
+    >
+      <span class="mdi mdi-chevron-right"></span>
+    </div>
+  </div>
+  <script>
+    function slidesComponent() {
+      return {
+        hover: false,
+        currentIndex: 0,
+        slides: [<%= data.slides.map((_, i) => (i + 1)) %>],
+        intervalId: -1,
+        next() {
+          this.setIndex((this.currentIndex + 1) % this.slides.length);
+        },
+        prev() {
+          this.setIndex((this.currentIndex + this.slides.length - 1) % this.slides.length);
+        },
+        setIndex (value) {
+          if (this.intervalId !== -1) {
+            clearInterval(this.intervalId);
+            this.init();
+          }
+          this.currentIndex = value
+        },
+        init() {
+          this.intervalId = setInterval(() => {
+            this.next();
+          }, 5000);
+        },
+      };
+    }
+  </script>
+</div>

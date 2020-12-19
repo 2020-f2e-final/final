@@ -22,5 +22,13 @@
                 "duration": "營運日期：2020 年 05 月 12 日 ~ 現今"
             }
         }
+    ],
+    "slides": [
+        "images/slide-1.jpg",
+        "images/slide-2.jpg",
+        "images/slide-3.jpg",
+        "images/slide-4.jpg",
+        "images/slide-5.jpg",
+        "images/slide-6.jpg"
     ]
 }
