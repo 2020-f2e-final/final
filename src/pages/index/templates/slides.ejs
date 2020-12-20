@@ -1,4 +1,4 @@
-<div class="w-11/12 xl:w-2/3 mx-auto mt-14 rounded-3xl overflow-hidden">
+<div class="w-11/12 sm:w-2/3 md:w-11/12 xl:w-2/3 mx-auto mt-8 sm:mt-14 rounded-3xl overflow-hidden">
   <div class="flex justify-center items-center bg-main-faded-blue h-10 sm:h-16">
     <p class="text-white text-xl sm:text-3xl font-thin">遊戲畫面</p>
   </div>
@@ -16,10 +16,10 @@
       :style="`font-size: 0; left: -${currentIndex * 100}%;`"
     >
       <% data.slides.forEach((img) => { %>
-      <span
+      <div
         class="inline-block w-full h-full bg-no-repeat bg-cover bg-center"
         style="background-image: url('<%= img %>')"
-      ></span>
+      ></div>
       <% }) %>
     </div>
     <div
@@ -35,24 +35,24 @@
       <% }) %>
     </div>
     <div
-      class="absolute top-0 left-0 flex justify-center items-center w-20 sm:w-32 h-full text-white text-7xl sm:text-9xl bg-gradient-to-r from-black to-transparent transition-opacity duration-500 cursor-pointer"
+      class="absolute top-0 left-0 flex justify-center items-center w-20 sm:w-32 h-full bg-gradient-to-r from-black to-transparent transition-opacity duration-500 cursor-pointer"
       :class="{
         'opacity-0': !hover,
         'opacity-50': hover
       }"
       x-on:click="prev"
     >
-      <span class="mdi mdi-chevron-left"></span>
+      <span class="mdi mdi-chevron-left text-white text-7xl sm:text-9xl"></span>
     </div>
     <div
-      class="absolute top-0 right-0 flex justify-center items-center w-20 sm:w-32 h-full text-white text-7xl sm:text-9xl bg-gradient-to-l from-black to-transparent transition-opacity duration-500 cursor-pointer"
+      class="absolute top-0 right-0 flex justify-center items-center w-20 sm:w-32 h-full bg-gradient-to-l from-black to-transparent transition-opacity duration-500 cursor-pointer"
       :class="{
         'opacity-0': !hover,
         'opacity-50': hover
       }"
       x-on:click="next"
     >
-      <span class="mdi mdi-chevron-right"></span>
+      <span class="mdi mdi-chevron-right text-white text-7xl sm:text-9xl"></span>
     </div>
   </div>
   <script>
@@ -60,13 +60,13 @@
       return {
         hover: false,
         currentIndex: 0,
-        slides: [<%= data.slides.map((_, i) => (i + 1)) %>],
+        numOfSlides: <%= data.slides.length %>,
         intervalId: -1,
         next() {
-          this.setIndex((this.currentIndex + 1) % this.slides.length);
+          this.setIndex((this.currentIndex + 1) % this.numOfSlides);
         },
         prev() {
-          this.setIndex((this.currentIndex + this.slides.length - 1) % this.slides.length);
+          this.setIndex((this.currentIndex + this.numOfSlides - 1) % this.slides.length);
         },
         setIndex (value) {
           if (this.intervalId !== -1) {
