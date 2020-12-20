@@ -1,1 +1,34 @@
-{}
+{
+    "intro": [
+        {
+            "link": {
+                "text": "電腦版",
+                "href": "https://tw.beanfun.com/kartrider/main.aspx"
+            },
+            "description": {
+                "image": "images/computer-car.png",
+                "content": "computer-description",
+                "duration": "營運日期：2006 年 12 月 19 日 ~ 現今"
+            }
+        },
+        {
+            "link": {
+                "text": "手機版",
+                "href": "https://kartrush.nexon.com/"
+            },
+            "description": {
+                "image": "images/cellphone-car.png",
+                "content": "cellphone-description",
+                "duration": "營運日期：2020 年 05 月 12 日 ~ 現今"
+            }
+        }
+    ],
+    "slides": [
+        "images/slide-1.jpg",
+        "images/slide-2.jpg",
+        "images/slide-3.jpg",
+        "images/slide-4.jpg",
+        "images/slide-5.jpg",
+        "images/slide-6.jpg"
+    ]
+}

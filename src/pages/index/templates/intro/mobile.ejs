@@ -1,0 +1,38 @@
+<div class="flex flex-wrap justify-evenly">
+  <% data.intro.forEach((item, index) => { %>
+  <div
+    class="mt-8 xl:hidden bg-main-light-blue-grey sm:rounded-3xl w-full sm:w-2/3 md:w-5/12 overflow-hidden"
+  >
+    <div
+      class="h-44 bg-cover bg-center bg-no-repeat"
+      style="background-image: url('<%= item.description.image %>')"
+    >
+      <a
+        class="block w-full h-full"
+        href="<%= item.link.href %> "
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div
+          class="flex justify-center items-center w-full h-full bg-black opacity-0 hover:opacity-60 transition-opacity duration-500"
+        >
+          <span class="text-3xl text-white font-thin"><%= item.link.text %></span>
+        </div>
+      </a>
+    </div>
+    <div class="intro-bg-gradient h-80 px-4">
+      <p
+        class="flex flex-col justify-center h-4/5 text-main-cadet-blue text-xl"
+      >
+        <%- include(item.description.content) %>
+      </p>
+      <p
+        class="flex justify-center items-center h-1/5 text-white text-md font-extralight"
+      >
+        <span><%= item.description.duration %></span>
+      </p>
+    </div>
+  </div>
+
+  <% }) %>
+</div>
