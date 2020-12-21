@@ -21,7 +21,7 @@
           this.setIndex((this.currentIndex + 1) % this.numOfSlides);
         },
         prev() {
-          this.setIndex((this.currentIndex + this.numOfSlides - 1) % this.slides.length);
+          this.setIndex((this.currentIndex + this.numOfSlides - 1) % this.numOfSlides);
         },
         setIndex (value) {
           if (this.intervalId !== -1) {
