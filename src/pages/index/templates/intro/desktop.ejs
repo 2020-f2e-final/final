@@ -1,8 +1,9 @@
 <% data.intro.forEach((item, index) => { %>
-<div
-  class="hidden xl:flex mt-14 mx-auto w-2/3<%= index === 1 ? ' flex-row-reverse' : '' %>"
+<div data-wow-offset="200"
+  class="wow hidden xl:flex mt-14 mx-auto w-2/3<%= index === 1 ? ' flex-row-reverse animate__fadeInLeft' : ' animate__fadeInRight' %>"
 >
-  <div class="flex h-72 w-4/5<%= index === 1 ? ' flex-row-reverse' : '' %>">
+  <div 
+  class="flex h-72 w-4/5<%= index === 1 ? ' flex-row-reverse' : '' %>">
     <div
       class="<%= index === 1 ? 'rounded-r-full pl-8' : 'rounded-l-full pr-8' %> intro-bg-gradient"
       style="box-shadow: 0 0.1rem 0.1rem 0 rgba(0, 0, 0, 0.2);"
