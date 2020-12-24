@@ -6,7 +6,7 @@
         {
           "name":"Spyder",
           "intro":"造型復古的敞篷跑車，休閒的紅白條紋搭配，從未落伍的經典設計帶你駛向夢開始的地方。",
-          "rarity":"史詩",
+          "rarity":1,
           "coating":false,
           "carImg":"racing-car1.png",
           "drift":"640",
@@ -18,7 +18,7 @@
         {
           "name":"洛迪敞篷跑車",
           "intro":"誘人的曲線、寬大的輪殼，這就是車手們夢寐以求的帥氣跑車。獨特的動力系統，足以讓它在賽道場上叱吒風雲。",
-          "rarity":"史詩",
+          "rarity":1,
           "coating":true,
           "carImg":"racing-car2.png",
           "drift":"671",
@@ -30,7 +30,7 @@
         {
           "name":"黃金敞篷跑車",
           "intro":"一身耀眼的黃金戰衣，華麗而尊貴。讓看到它的賽車手都情不自禁充滿了鬥志！",
-          "rarity":"傳說",
+          "rarity":2,
           "coating":true,
           "carImg":"racing-car3.png",
           "drift":"777",
@@ -42,7 +42,7 @@
         {
           "name":"熊貓車",
           "intro":"俏皮的黑眼圈、肥碩的體型、慵懶萌呆的神情，處處顯露出熊貓無可匹敵的魅力。每個看到它的人都會忍不住感嘆：這輛車也太可愛了吧！",
-          "rarity":"史詩",
+          "rarity":1,
           "coating":false,
           "carImg":"racing-car4.png",
           "drift":"674",
@@ -54,7 +54,7 @@
         {
           "name":"薔薇棉花糖",
           "intro":"以「棉花糖SR」為原型的致敬設計，配備全新九代引擎帶來極致的操控體驗。這是棉花糖的力量，永不磨滅。",
-          "rarity":"傳說",
+          "rarity":2,
           "coating":true,
           "carImg":"racing-car5.png",
           "drift":"754",
@@ -71,7 +71,7 @@
         {
           "name":"香蕉車",
           "intro":"在第99次踩到香蕉皮摔倒後，ㄚ肥終於研製出了不怕香蕉皮的道具車。它將這段經歷稱之為「痛的領悟」。",
-          "rarity":"史詩",
+          "rarity":1,
           "coating":false,
           "carImg":"tool-car1.png",
           "drift":"569",
@@ -86,7 +86,7 @@
         {
           "name":"獨角獸",
           "intro":"彷彿從神話故事中走出來的夢幻座駕，將帶給車手速度和穩定上的極致體驗。",
-          "rarity":"傳說",
+          "rarity":2,
           "coating":false,
           "carImg":"tool-car2.png",
           "drift":"670",
@@ -101,7 +101,7 @@
         {
           "name":"馴鹿車",
           "intro":"作為聖誕老人的專車，馴鹿的速度和穩定性都非常棒。坐上去體驗一下當聖誕老人的感覺吧。",
-          "rarity":"史詩",
+          "rarity":1,
           "coating":false,
           "carImg":"tool-car3.png",
           "drift":"637",
@@ -118,7 +118,7 @@
         {
           "name":"馬桶車",
           "intro":"神奇的馬桶車來啦，出色的道具功能搭配強力的歐姆引擎，使馬桶車在道具賽中無往而不利。",
-          "rarity":"史詩",
+          "rarity":1,
           "coating":false,
           "carImg":"tool-car4.png",
           "drift":"633",
