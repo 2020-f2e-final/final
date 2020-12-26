@@ -1,7 +1,9 @@
+<br/>
+<br/>
 <div x-data="{ tab: 'level' }" >
-    <div class="relative top-12 border grid grid-cols-10 gap-4">
-        <div class="border col-start-2 text-6xl font-bold cursor-pointer text-main-levelTitle-light { 'active': tab === 'level' }" @click="tab = 'level'">等級</div>
-        <div class="border col-start-7 text-6xl font-bold cursor-pointer text-main-levelTitle-dark { 'active': tab === 'licence' }" @click="tab = 'licence'">駕照</div>
+    <div class="grid grid-cols-10 gap-4">
+        <div class="col-start-2 text-6xl font-bold cursor-pointer text-main-levelTitle-light { 'active': tab === 'level' }" @click="tab = 'level'">等級</div>
+        <div class="col-start-7 text-6xl font-bold cursor-pointer text-main-levelTitle-dark { 'active': tab === 'licence' }" @click="tab = 'licence'">駕照</div>
     </div>
 
     <div x-show="tab === 'level'">
