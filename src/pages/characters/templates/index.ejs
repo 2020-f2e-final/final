@@ -1,23 +1,22 @@
 <h1>characters</h1>
 
-<div x-data="{ tab: 'base' }">
-    <div class="grid grid-cols-6 gap-4">
-        <div class="col-start-2 col-span-1 flex items-end text-main-light-blue-grey
-        text-6xl ">
-            <button :class="{ 'active': tab === 'base' }" @click="tab = 'base'">
+<div class="w-11/12 sm:w-2/3 md:w-2/3 xl:w-2/3 mx-auto pt-20" x-data="{ tab: 'base' }">
+    <div class="cursor-pointer pb-24 border flex items-end border-purple-400">
+        <div class="text-main-light-blue-grey text-6xl pr-10">
+            <div class="{ 'active': tab === 'base' }" @click="tab = 'base'">
                 基礎
-            </button>
+            </div>
         </div>
-        <div class="col-start-3 col-span-1 flex items-end text-main-light-blue-grey
-        text-6xl text-opacity-25 hover:text-4xl hover:text-opacity-100">
-            <button :class="{ 'active': tab === 'animal' }" @click="tab = 'animal'">
+        <div class="text-main-light-blue-grey text-6xl text-opacity-25
+        hover:text-opacity-100">
+            <div class="{ 'active': tab === 'animal' }" @click="tab = 'animal'">
                 動物
-            </button>    
+            </div>    
         </div>
     </div>
 
     <div x-show="tab === 'base'">
-        <%- include('base') %> 
+        <%- include('base') %>
     </div>
     <div x-show="tab === 'animal'">Tab animal</div>
 </div>
