@@ -50,6 +50,7 @@ module.exports = {
         'tool-bg-blue':'#5E78A4', //道具圖片的背景
         'levelTitle-light':'#cccccc',//波波專屬色,等級駕照(亮)
         'levelTitle-dark':'#8A8A8A',//波波專屬色,等級駕照(暗)
+        'levelText':'#4E6998',//波波專屬色,等級內文
       }
     },
     spacing: {
