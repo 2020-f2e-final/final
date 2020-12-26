@@ -1,9 +1,11 @@
-<div class="relative top-12 border grid grid-cols-10 gap-4">
-    <div class="border col-start-2 text-6xl font-bold cursor-pointer text-main-levelTitle-light">等級</div>
-    <div class="border col-start-7 text-6xl font-bold cursor-pointer text-main-levelTitle-dark">駕照</div>
-</div>
-<div class="relative top-14 border grid grid-cols-12 gap-4">
-    <div class="border col-start-2 text-2xl cursor-pointer text-white">手套</div>
-    <div class="border col-start-3 text-2xl cursor-pointer text-white">星手套</div>
-    <div class="border col-start-4 text-2xl cursor-pointer text-white">星星</div>
+<div x-data="{ tab: 'level' }" >
+    <div class="relative top-12 border grid grid-cols-10 gap-4">
+        <div class="border col-start-2 text-6xl font-bold cursor-pointer text-main-levelTitle-light { 'active': tab === 'level' }" @click="tab = 'level'">等級</div>
+        <div class="border col-start-7 text-6xl font-bold cursor-pointer text-main-levelTitle-dark { 'active': tab === 'licence' }" @click="tab = 'licence'">駕照</div>
+    </div>
+
+    <div x-show="tab === 'level'">
+        <%- include('level') %>
+    </div>
+    <div x-show="tab === 'licence'">Tab Bar</div>
 </div>
