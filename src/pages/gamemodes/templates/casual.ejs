@@ -1,11 +1,11 @@
 <div x-data="{ tab: 'aa' }">
-    <div class="flex justify-evenly">
+    <div class="flex justify-evenly text-4xl border-solid border-2">
         <button :class="{ 'active': tab === 'aa' }" @click="tab = 'aa'">道具賽</button>
         <button :class="{ 'active': tab === 'bb' }" @click="tab = 'bb'">寵物</button>
         <button :class="{ 'active': tab === 'cc' }" @click="tab = 'cc'">接力賽</button>
         <button :class="{ 'active': tab === 'dd' }" @click="tab = 'dd'">無限加速</button>
     </div>
-    <div class="flex justify-center">
+    <div class="flex justify-center border-solid border-2 bg-main-light-blue-grey">
         <div x-show="tab === 'aa'">道具賽</div>
         <div x-show="tab === 'bb'">寵物</div>
         <div x-show="tab === 'cc'">接力賽</div>
