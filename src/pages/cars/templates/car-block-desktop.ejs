@@ -2,7 +2,7 @@
   <div class="relative flex flex-col items-end p-4 bg-main-light-blue-grey h-72 w-full">
     <p class="text-main-title-blue text-5xl"><%= car.name %></p>
     <p class="w-7/12 lg:w-1/2 mt-4 text-indent"><%= car.intro %></p>
-    <img class="absolute w-96 h-auto -left-20 -bottom-1/2" src="images/<%= car.carImg %> " alt="">
+    <img data-wow-offset="300" class="wow animate__bounceInRight absolute w-96 h-auto -left-20 -bottom-1/2" src="images/<%= car.carImg %> " alt="">
     <div class="flex items-center justify-end bg-main-greyish-brown w-full h-28 -mr-4 mt-auto -mb-2 rounded-tl-full overflow-hidden">
       <div class="flex items-end">
         <% [['', ''], ['', ''], ['', ''], ['drift', '飄移'], ['acceleration', '加速度'],['curve', '彎道'], ['accelerationTime', '加速<br>時間'], ['gasGatheringSpeed', '集氣<br>速度']].forEach(([key, text]) => { %>
