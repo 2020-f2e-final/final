@@ -1,7 +1,7 @@
 <div x-data="level()">
     <div class="flex mt-6">
         <% data.levelTypes.forEach((type) =>{%>
-        <div class="w-1/12 text-2xl text-white cursor-pointer" @click="scrollTo('<%= type.typeName %>')"><%= type.typeName %></div>
+        <div class="w-1/12 text-2xl text-white cursor-pointer hover:text-main-levelTitle-dark" @click="scrollTo('<%= type.typeName %>')"><%= type.typeName %></div>
         <% }) %> 
     </div>
 
