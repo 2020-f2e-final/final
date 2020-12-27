@@ -1,15 +1,16 @@
 <h1>characters</h1>
 
 <div class="w-11/12 sm:w-2/3 md:w-2/3 xl:w-2/3 mx-auto pt-20" x-data="{ tab: 'base' }">
-    <div class="cursor-pointer pb-24 border flex items-end border-purple-400">
-        <div class="text-main-light-blue-grey text-6xl pr-10">
-            <div class="{ 'active': tab === 'base' }" @click="tab = 'base'">
+    <div class="cursor-pointer pb-24 flex items-end">
+        <div class="text-main-light-blue-grey mr-10 flex space-x-4 hover:text-opacity-100" 
+        :class="{ 'text-opacity-25': tab !== 'base','text-5xl': tab !== 'base'}">
+            <div :class="{ 'text-opacity-100': tab === 'base', 'text-7xl': tab === 'base'}" @click="tab = 'base'">
                 基礎
             </div>
         </div>
-        <div class="text-main-light-blue-grey text-6xl text-opacity-25
-        hover:text-opacity-100">
-            <div class="{ 'active': tab === 'animal' }" @click="tab = 'animal'">
+        <div class="text-main-light-blue-grey mr-10 flex space-x-4 hover:text-opacity-100" 
+        :class="{ 'text-opacity-25': tab !== 'animal','text-5xl': tab !== 'animal'}">
+            <div :class="{ 'text-opacity-100': tab === 'animal','text-7xl': tab === 'animal'}" @click="tab = 'animal'">
                 動物
             </div>    
         </div>
@@ -18,5 +19,6 @@
     <div x-show="tab === 'base'">
         <%- include('base') %>
     </div>
-    <div x-show="tab === 'animal'">Tab animal</div>
+    <div x-show="tab === 'animal'">
+        <%- include('animal') %></div>
 </div>
