@@ -1,5 +1,5 @@
 <div x-data="{ ttab: 'aa' }">
-    <div class="flex justify-evenly text-5xl">
+    <div class="flex justify-evenly text-6xl">
         <div :class="{ 'active': ttab === 'aa' }" class="cursor-pointer text-main-gray-blue hover:text-white" @click="ttab = 'aa'">道具賽</div>
         <div :class="{ 'active': ttab === 'bb' }" class="cursor-pointer text-main-gray-blue hover:text-white" @click="ttab = 'bb'">寵物</div>
         <div :class="{ 'active': ttab === 'cc' }" class="cursor-pointer text-main-gray-blue hover:text-white" @click="ttab = 'cc'">接力賽</div>
@@ -10,8 +10,17 @@
             <%- include('casualitem/toolintro') %>
             <%- include('casualitem/toolitem') %>
         </div>
-        <div x-show="ttab === 'bb'"><%- include('casualitem/petintro') %></div>
-        <div x-show="ttab === 'cc'"><%- include('casualitem/relayintro') %></div>
-        <div x-show="ttab === 'dd'"><%- include('casualitem/fastintro') %></div>
+        <div x-show="ttab === 'bb'">
+            <%- include('casualitem/petintro') %>
+            
+        </div>
+        <div x-show="ttab === 'cc'">
+            <%- include('casualitem/relayintro') %>
+            <%- include('casualitem/relayitem') %>
+        </div>
+        <div x-show="ttab === 'dd'">
+            <%- include('casualitem/fastintro') %>
+
+        </div>
     </div>
 </div>
