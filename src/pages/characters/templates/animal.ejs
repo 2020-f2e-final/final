@@ -7,9 +7,21 @@
                     <div class="bg-main-light-blue-grey pr-36 pb-8">
                         <div class="flex justify-start items-end pl-20 pr-8 py-5">
                             <p class="text-5xl text-main-role-name font-normal pr-8"><%= character.name %></p>
-                            <div class="bg-main-role-rare-blue py-1 px-3">
-                                <p class="flex items-start">稀有</p>
-                            </div>
+                            <% if (character.rarity === 1) { %>
+                                <div class="bg-main-role-rare-blue py-1 px-3">
+                                    <p class="flex items-start text-2xl">稀有</p>
+                                </div>
+                            <% } %>
+                            <% if (character.rarity === 2) { %>
+                                <div class="bg-main-role-epic-purple py-1 px-3">
+                                    <p class="flex items-start text-2xl">史詩</p>
+                                </div>
+                            <% } %>
+                            <% if (character.rarity === 3) { %>
+                                <div class="bg-main-role-legend-orange py-1 px-3">
+                                    <p class="flex items-start text-2xl">傳說</p>
+                                </div>
+                            <% } %>
                         </div>
                         <div class="flex justify-start bg-main-role-gray pr-32">
                             <div class="text-2xl pl-20 py-3">
@@ -41,9 +53,21 @@
                     <div class="bg-main-light-blue-grey pl-36 pb-8">
                         <div class="flex justify-start items-end pl-44 pr-8 py-5">
                             <p class="text-5xl text-main-role-name font-normal pr-5"><%= character.name %></p>
-                            <div class="bg-main-role-rare-blue py-1 px-3">
-                                <p class="flex items-start">稀有</p>
-                            </div>
+                            <% if (character.rarity === 1) { %>
+                                <div class="bg-main-role-rare-blue py-1 px-3">
+                                    <p class="flex items-start text-2xl ">稀有</p>
+                                </div>
+                            <% } %>
+                            <% if (character.rarity === 2) { %>
+                                <div class="bg-main-role-epic-purple py-1 px-3">
+                                    <p class="flex items-start text-2xl">史詩</p>
+                                </div>
+                            <% } %>
+                            <% if (character.rarity === 3) { %>
+                                <div class="bg-main-role-legend-orange py-1 px-3">
+                                    <p class="flex items-start text-2xl">傳說</p>
+                                </div>
+                            <% } %>
                         </div>
                         <div class="flex justify-start bg-main-role-gray pr-20">
                             <div class="text-2xl pl-44 py-3">
