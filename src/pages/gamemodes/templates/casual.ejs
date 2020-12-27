@@ -1,13 +1,13 @@
 <div x-data="{ tab: 'aa' }">
-    <div class="flex justify-evenly text-4xl border-solid border-2">
-        <div class="{ 'active': tab === 'aa' } cursor-pointer" @click="tab = 'aa'">道具賽</div>
-        <div class="{ 'active': tab === 'bb' } cursor-pointer" @click="tab = 'bb'">寵物</div>
-        <div class="{ 'active': tab === 'cc' } cursor-pointer" @click="tab = 'cc'">接力賽</div>
-        <div class="{ 'active': tab === 'dd' } cursor-pointer" @click="tab = 'dd'">無限加速</div>
+    <div class="flex justify-evenly text-5xl">
+        <div class="{ 'active': tab === 'aa' } cursor-pointer text-main-gray-blue hover:text-white" @click="tab = 'aa'">道具賽</div>
+        <div class="{ 'active': tab === 'bb' } cursor-pointer text-main-gray-blue hover:text-white" @click="tab = 'bb'">寵物</div>
+        <div class="{ 'active': tab === 'cc' } cursor-pointer text-main-gray-blue hover:text-white" @click="tab = 'cc'">接力賽</div>
+        <div class="{ 'active': tab === 'dd' } cursor-pointer text-main-gray-blue hover:text-white" @click="tab = 'dd'">無限加速</div>
     </div>
-    <div class="flex justify-center border-solid border-2 bg-main-light-blue-grey">
-        <div x-show="tab === 'aa'">道具賽<br/><%- include('casualitem/toolintro') %></div>
-        <div x-show="tab === 'bb'">寵物</div>
+    <div class="flex justify-center bg-main-light-blue-grey">
+        <div x-show="tab === 'aa'"><br/><%- include('casualitem/toolintro') %></div>
+        <div x-show="tab === 'bb'"><br/><%- include('casualitem/petintro') %></div>
         <div x-show="tab === 'cc'">接力賽</div>
         <div x-show="tab === 'dd'">無限加速</div>
     </div>
