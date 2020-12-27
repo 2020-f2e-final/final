@@ -5,9 +5,12 @@
         <div class="{ 'active': tab === 'cc' } cursor-pointer text-main-gray-blue hover:text-white" @click="tab = 'cc'">接力賽</div>
         <div class="{ 'active': tab === 'dd' } cursor-pointer text-main-gray-blue hover:text-white" @click="tab = 'dd'">無限加速</div>
     </div>
-    <div class="bg-main-light-blue-grey pl-8">
-        <div x-show="tab === 'aa'"><br/><%- include('casualitem/toolintro') %></div>
-        <div x-show="tab === 'bb'"><br/><%- include('casualitem/petintro') %></div>
+    <div class="">
+        <div x-show="tab === 'aa'">
+            <%- include('casualitem/toolintro') %>
+            <%- include('casualitem/toolitem') %>
+        </div>
+        <div x-show="tab === 'bb'"><%- include('casualitem/petintro') %></div>
         <div x-show="tab === 'cc'">接力賽</div>
         <div x-show="tab === 'dd'">無限加速</div>
     </div>
