@@ -1,0 +1,9 @@
+<div x-data="{ tttab: 'aa' }">
+    <div class="flex justify-between text-7xl">
+        <div :class="{ 'active': tttab === 'aa' }" class="cursor-pointer text-main-gray-blue hover:text-white font-bold" @click="tttab = 'aa'">個人競速</div>
+        <div :class="{ 'active': tttab === 'bb' }" class="cursor-pointer text-main-gray-blue hover:text-white font-bold" @click="tttab = 'bb'">組隊競速</div>
+    </div>
+    <div>
+        <div x-show="tttab === 'aa'">個人</div>
+        <div x-show="tttab === 'bb'">組隊</div>
+</div>
