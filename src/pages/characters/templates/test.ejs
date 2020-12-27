@@ -1,0 +1,83 @@
+
+<% data.carTypes.forEach((type, i) => { %> 
+    <div x-show="selected === <%= i %>">
+      <% type.cars.forEach((car) => { %> 
+        <div class="mb-24 flex flex-col items-end">
+          <div class="relative flex flex-col items-end p-4 bg-main-light-blue-grey h-72 w-full">
+            <p class="text-main-title-blue text-5xl"><%= car.name %></p>
+            <p class="w-7/12 lg:w-1/2 mt-4"><%= car.intro %></p>
+            <img class="absolute w-96 h-auto -left-20 -bottom-1/2" src="images/<%= character.characterImg %> " alt="">
+            <div class="flex items-center justify-end bg-main-greyish-brown w-full h-28 -mr-4 mt-auto -mb-2 rounded-tl-full overflow-hidden">
+              <div class="flex items-end">
+                <% [['', ''], ['', ''], ['', ''], ['drift', '飄移'], ['acceleration', '加速度'],['curve', '彎道'], ['accelerationTime', '加速<br>時間'], ['gasGatheringSpeed', '集氣<br>速度']].forEach(([key, text]) => { %>
+                <div class="text-center w-16 ml-2">
+                  <% if (text) { %>
+                    <p class="text-white font-light"><%- text %></p>
+                  <% } else { %>
+                    <p class="text-transparent font-light select-none">QAQ</p>
+                  <% } %> 
+                  <div class="inline-block bg-white my-2 w-10 h-0.5"></div>
+                  <% if (text) { %>
+                    <p class="text-white font-light"><%= car[key] %> </p>
+                  <% } else { %>
+                    <p class="text-transparent font-light select-none">QAQ</p>
+                  <% } %>
+                </div>
+                <% }) %> 
+              </div>
+            </div>
+            <div class="absolute left-2 top-2 p-4">
+              <span class="mr-2 px-4 py-1 font-light text-xl text-white tracking-widest <%= car.rarity === 1 ? 'bg-main-pinky-purple' : 'bg-main-orange-yellow' %>"><%= ['史詩', '傳說'][car.rarity - 1] %></span>
+              <% if (car.coating) { %>
+                <span class="px-4 py-1 font-light text-xl text-white tracking-widest bg-main-greyish-brown">可塗裝</span>
+              <% } %> 
+            </div>
+          </div>
+          <% if (car.features) { %>
+            <ul class="p-4 text-white font-thin">
+              <% car.features.forEach((item) => { %> 
+              <li><span class="pr-2 text-xs">◆</span><%= item %></li>
+              <% }) %> 
+            </ul>
+          <% } %>
+        </div>
+      <% }) %> 
+    </div>
+  <% }) %>
+
+
+  <br/>
+  <div class="grid grid-cols-12 gap-4">
+      <div class="col-start-1 text-2xl cursor-pointer text-white">手套</div>
+      <div class="col-start-2 text-2xl cursor-pointer text-white">星手套</div>
+      <div class="col-start-3 text-2xl cursor-pointer text-white">星星</div>
+  </div>
+  
+  <% data.levelTypes.forEach((type, i) => { %>
+      <div x-show="selected ===<%= i %>">
+          <br/>
+          <div class="grid grid-cols-12">
+              <div class="col-start-1 relative left-2 text-5xl text-white sm:underline"><%= type.typeName %></div>
+          </div>
+          <br/>
+          <div class="grid grid-cols-3 justify-items-center gap-10">
+              <% type.level.forEach((level) =>{%>
+                  <div class="rounded-3xl bg-main-light-blue-grey w-72 h-36">
+                      <div class="rounded-t-3xl bg-main-faded-blue w-72 h-9">
+                          <p class="text-center text-2xl text-white relative left-10"><%= level.name %></p>
+                          <div class="relative top-7 left-12">
+                              <p class="relative  text-main-levelText text-center text-4xl"><%= level.text %></p>
+                          </div>
+                          <div class="relative -top-20 grid grid-cols-7 justify-items-center">
+                              <div class="rounded-full bg-main-gloves-blue w-36 h-36 shadow-2xl" style="box-shadow: 2px 2px 2px 3px rgba(0, 0, 0, 0.2);">
+                                  <div>
+                                      <img class="relative top-2" src="images/<%= level.img %> " alt="">
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              <% }) %>
+          </div>
+      </div>
+  <% }) %>
