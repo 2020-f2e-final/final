@@ -1,9 +1,9 @@
 <div x-data="{ ttab: 'aa' }">
-    <div class="flex justify-evenly text-6xl">
-        <div :class="{ 'active': ttab === 'aa' }" class="cursor-pointer text-main-gray-blue hover:text-white" @click="ttab = 'aa'">道具賽</div>
-        <div :class="{ 'active': ttab === 'bb' }" class="cursor-pointer text-main-gray-blue hover:text-white" @click="ttab = 'bb'">寵物</div>
-        <div :class="{ 'active': ttab === 'cc' }" class="cursor-pointer text-main-gray-blue hover:text-white" @click="ttab = 'cc'">接力賽</div>
-        <div :class="{ 'active': ttab === 'dd' }" class="cursor-pointer text-main-gray-blue hover:text-white" @click="ttab = 'dd'">無限加速</div>
+    <div class="flex justify-between text-7xl">
+        <div :class="{ 'active': ttab === 'aa' }" class="cursor-pointer text-main-gray-blue hover:text-white font-bold" @click="ttab = 'aa'">道具賽</div>
+        <div :class="{ 'active': ttab === 'bb' }" class="cursor-pointer text-main-gray-blue hover:text-white font-bold" @click="ttab = 'bb'">寵物</div>
+        <div :class="{ 'active': ttab === 'cc' }" class="cursor-pointer text-main-gray-blue hover:text-white font-bold" @click="ttab = 'cc'">接力賽</div>
+        <div :class="{ 'active': ttab === 'dd' }" class="cursor-pointer text-main-gray-blue hover:text-white font-bold" @click="ttab = 'dd'">無限加速</div>
     </div>
     <div class="">
         <div x-show="ttab === 'aa'">
