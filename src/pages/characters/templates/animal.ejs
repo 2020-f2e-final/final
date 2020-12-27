@@ -15,13 +15,19 @@
                             <div class="text-2xl pl-20 py-3">
                                 <p class="py-1"><%= character.birth %></p>
                                 <p class="py-1 pb-10"><%= character.temp %></p>
-                                <p class="py-1"><%= character.intro %></p>
+                                <p class="py-1 leading-loose"><%= character.intro %></p>
                             </div>
                         </div>
                     </div>
-                    <div class="flex justify-start pl-20 py-3">
-                        <p class="pr-3 pt-2 ">◆ </p>
-                        <p class="text-2xl py-1"><%= character.bonus %></p>
+                    <div class="pt-3">
+                        <% character.bonus.forEach((bo, k) => { %>
+                            <div class="flex justify-start pl-20 pt-2">
+                                    <p class="pr-3 pt-2 ">◆ </p>
+                                    <p class="text-2xl py-1">
+                                        <%= bo %>
+                                    </p>
+                            </div>
+                        <% })%>
                     </div>
                 </div>
                 <div class="absolute top-0 -right-16 w-5/12">
@@ -43,13 +49,19 @@
                             <div class="text-2xl pl-44 py-3">
                                 <p class="py-1"><%= character.birth %></p>
                                 <p class="py-1 pb-10"><%= character.temp %></p>
-                                <p class="py-1"><%= character.intro %></p>
+                                <p class="py-1 leading-loose"><%= character.intro %></p>
                             </div>
                         </div>
                     </div>
-                    <div class="flex justify-start pl-80 py-3">
-                        <p class="pr-3 pt-2">◆ </p>
-                        <p class="text-2xl py-1"><%= character.bonus %></p>
+                    <div class="pt-3">
+                        <% character.bonus.forEach((bo, k) => { %>
+                            <div class="flex justify-start pl-20 pt-2">
+                                    <p class="pr-3 pt-2 ">◆ </p>
+                                    <p class="text-2xl py-1">
+                                        <%= bo %>
+                                    </p>
+                            </div>
+                        <% })%>
                     </div>
                 </div>
                 <div class="absolute top-0 -left-16 w-5/12">
