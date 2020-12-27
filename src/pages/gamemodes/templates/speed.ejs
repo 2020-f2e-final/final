@@ -1,7 +1,7 @@
 <div x-data="{ tttab: 'aa' }">
-    <div class="flex justify-between text-7xl">
-        <div :class="{ 'active': tttab === 'aa' }" class="cursor-pointer text-main-gray-blue hover:text-white font-bold" @click="tttab = 'aa'">個人競速</div>
-        <div :class="{ 'active': tttab === 'bb' }" class="cursor-pointer text-main-gray-blue hover:text-white font-bold" @click="tttab = 'bb'">組隊競速</div>
+    <div class="flex justify-between">
+        <div :class="{ 'active': tttab === 'aa' }" class="cursor-pointer hover:text-white text-main-light-blue-grey text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-medium lg:font-bold tracking-wider opacity-30" @click="tttab = 'aa'">個人競速</div>
+        <div :class="{ 'active': tttab === 'bb' }" class="cursor-pointer hover:text-white text-main-light-blue-grey text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-medium lg:font-bold tracking-wider opacity-30" @click="tttab = 'bb'">組隊競速</div>
     </div>
     <div>
         <div x-show="tttab === 'aa'">個人</div>
