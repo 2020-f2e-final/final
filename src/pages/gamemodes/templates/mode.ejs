@@ -1,10 +1,10 @@
 <div x-data="{ tab: 'aa' }">
     <div class="flex justify-evenly text-5xl p-8">
-        <div class="{ 'active': tab === 'aa' } cursor-pointer bg-main-light-blue-grey rounded-lg text-main-title-blue p-2" @click="tab = 'aa'">休閒模式</div>
-        <div class="{ 'active': tab === 'bb' } cursor-pointer bg-main-black-blue rounded-lg text-white hover:bg-main-light-blue-grey p-2" @click="tab = 'bb'">競速模式</div>
-        <div class="{ 'active': tab === 'cc' } cursor-pointer bg-main-black-blue rounded-lg text-white hover:bg-main-light-blue-grey p-2" @click="tab = 'cc'">排位賽</div>
-        <div class="{ 'active': tab === 'dd' } cursor-pointer bg-main-black-blue rounded-lg text-white hover:bg-main-light-blue-grey p-2" @click="tab = 'dd'">故事模式</div>
-        <div class="{ 'active': tab === 'ff' } cursor-pointer bg-main-black-blue rounded-lg text-white hover:bg-main-light-blue-grey p-2" @click="tab = 'ff'">計時賽</div>
+        <div :class="{ 'active': tab === 'aa' }" class="cursor-pointer bg-main-light-blue-grey rounded-lg text-main-title-blue p-2" @click="tab = 'aa'">休閒模式</div>
+        <div :class="{ 'active': tab === 'bb' }" class="cursor-pointer bg-main-black-blue rounded-lg text-white hover:bg-main-light-blue-grey p-2" @click="tab = 'bb'">競速模式</div>
+        <div :class="{ 'active': tab === 'cc' }" class="cursor-pointer bg-main-black-blue rounded-lg text-white hover:bg-main-light-blue-grey p-2" @click="tab = 'cc'">排位賽</div>
+        <div :class="{ 'active': tab === 'dd' }" class="cursor-pointer bg-main-black-blue rounded-lg text-white hover:bg-main-light-blue-grey p-2" @click="tab = 'dd'">故事模式</div>
+        <div :class="{ 'active': tab === 'ff' }" class="cursor-pointer bg-main-black-blue rounded-lg text-white hover:bg-main-light-blue-grey p-2" @click="tab = 'ff'">計時賽</div>
     </div>
     <div>
         <div x-show="tab === 'aa'"><%- include('casual') %></div>
