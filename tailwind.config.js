@@ -45,6 +45,7 @@ module.exports = {
         'role-legend-orange':'#fca000', //人物傳說
         'role-gray':'#575757', //人物介紹-灰色
         'role-name':'#334666',//人物名字
+        't-gray':'#6C7075', //寵物介紹
       }
     },
     spacing: {
