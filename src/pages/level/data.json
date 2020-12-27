@@ -5,38 +5,38 @@
             "level":[
                 {
                     "name":"黃色手套",
-                    "text":"Lv1-Lv5",
-                    "imgLevel":"Lv1",
+                    "text":"Lv.1-Lv.5",
+                    "imgLevel":"Lv.1",
                     "img":"lv1.png"
                 },
                 {
                     "name":"綠色手套",
-                    "text":"Lv6-Lv10",
-                    "imgLevel":"Lv6",
+                    "text":"Lv.6-Lv.10",
+                    "imgLevel":"Lv.6",
                     "img":"lv6.png"
                 },
                 {
                     "name":"藍色手套",
-                    "text":"Lv11-Lv15",
-                    "imgLevel":"Lv12",
+                    "text":"Lv.11-Lv.15",
+                    "imgLevel":"Lv.12",
                     "img":"lv12.png"
                 },
                 {
                     "name":"紅色手套",
-                    "text":"Lv16-Lv20",
-                    "imgLevel":"Lv19",
+                    "text":"Lv.16-Lv.20",
+                    "imgLevel":"Lv.19",
                     "img":"lv19.png"
                 },
                 {
                     "name":"黑色手套",
-                    "text":"Lv21-Lv25",
-                    "imgLevel":"Lv23",
+                    "text":"Lv.21-Lv.25",
+                    "imgLevel":"Lv.23",
                     "img":"lv23.png"
                 },
                 {
                     "name":"彩色手套",
-                    "text":"Lv26-Lv30",
-                    "imgLevel":"Lv30",
+                    "text":"Lv.26-Lv.30",
+                    "imgLevel":"Lv.30",
                     "img":"lv30.png"
                 }
             ]
@@ -46,38 +46,38 @@
             "level":[
                 {
                     "name":"星黃手套",
-                    "text":"Lv31-Lv35",
-                    "imgLevel":"Lv31",
+                    "text":"Lv.31-Lv.35",
+                    "imgLevel":"Lv.31",
                     "img":"lv31.png"
                 },
                 {
                     "name":"星綠手套",
-                    "text":"Lv36-Lv40",
-                    "imgLevel":"Lv37",
+                    "text":"Lv.36-Lv.40",
+                    "imgLevel":"Lv.37",
                     "img":"lv37.png"
                 },
                 {
                     "name":"星藍手套",
-                    "text":"Lv41-Lv45",
-                    "imgLevel":"Lv43",
+                    "text":"Lv.41-Lv.45",
+                    "imgLevel":"Lv.43",
                     "img":"lv43.png"
                 },
                 {
                     "name":"星紅手套",
-                    "text":"Lv46-Lv50",
-                    "imgLevel":"Lv49",
+                    "text":"Lv.46-Lv.50",
+                    "imgLevel":"Lv.49",
                     "img":"lv49.png"
                 },
                 {
                     "name":"星黑手套",
-                    "text":"Lv51-Lv55",
-                    "imgLevel":"Lv55",
+                    "text":"Lv.51-Lv.55",
+                    "imgLevel":"Lv.55",
                     "img":"lv55.png"
                 },
                 {
                     "name":"星彩虹手套",
-                    "text":"Lv56-Lv60",
-                    "imgLevel":"Lv56",
+                    "text":"Lv.56-Lv.60",
+                    "imgLevel":"Lv.56",
                     "img":"lv56.png"
                 }
             ]
@@ -87,38 +87,38 @@
             "level":[
                 {
                     "name":"黃色星星",
-                    "text":"Lv61-Lv65",
-                    "imgLevel":"Lv62",
+                    "text":"Lv.61-Lv.65",
+                    "imgLevel":"Lv.62",
                     "img":"lv62.png"
                 },
                 {
                     "name":"綠色星星",
-                    "text":"Lv66-Lv70",
-                    "imgLevel":"Lv68",
+                    "text":"Lv.66-Lv.70",
+                    "imgLevel":"Lv.68",
                     "img":"lv68.png"
                 },
                 {
                     "name":"藍色星星",
-                    "text":"Lv71-Lv75",
-                    "imgLevel":"Lv74",
+                    "text":"Lv.71-Lv.75",
+                    "imgLevel":"Lv.74",
                     "img":"lv74.png"
                 },
                 {
                     "name":"紅色星星",
-                    "text":"Lv76-Lv80",
-                    "imgLevel":"Lv80",
+                    "text":"Lv.76-Lv.80",
+                    "imgLevel":"Lv.80",
                     "img":"lv80.png"
                 },
                 {
                     "name":"黑色星星",
-                    "text":"Lv81-Lv85",
-                    "imgLevel":"Lv81",
+                    "text":"Lv.81-Lv.85",
+                    "imgLevel":"Lv.81",
                     "img":"lv81.png"
                 },
                 {
                     "name":"彩色星星",
-                    "text":"Lv86-Lv90",
-                    "imgLevel":"Lv88",
+                    "text":"Lv.86-Lv.90",
+                    "imgLevel":"Lv.88",
                     "img":"lv88.png"
                 }
             ]
