@@ -4,6 +4,6 @@
         <div :class="{ 'active': tttab === 'bb' }" class="cursor-pointer hover:text-white text-main-light-blue-grey text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-medium lg:font-bold tracking-wider opacity-30" @click="tttab = 'bb'">組隊競速</div>
     </div>
     <div>
-        <div x-show="tttab === 'aa'"><%- include('pitem') %></div>
+        <div x-show="tttab === 'aa'"><%- include('speeditem/pitem') %></div>
         <div x-show="tttab === 'bb'">組隊</div>
 </div>
