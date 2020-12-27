@@ -1,0 +1,33 @@
+<br/>
+<div class="grid grid-cols-12 gap-4">
+    <div class="col-start-1 text-2xl cursor-pointer text-white">手套</div>
+    <div class="col-start-2 text-2xl cursor-pointer text-white">星手套</div>
+    <div class="col-start-3 text-2xl cursor-pointer text-white">星星</div>
+</div>
+
+<% data.levelTypes.forEach((type, i) => { %>
+    <div x-show="selected ===<%= i %>">
+        <br/>
+        <div class="grid grid-cols-12">
+            <div class="col-start-1 relative left-2 text-5xl text-white sm:underline"><%= type.typeName %></div>
+        </div>
+        <br/>
+        <div class="border border-pink-500 grid grid-cols-3 justify-items-center gap-10">
+            <% type.level.forEach((level) =>{%>
+                <div class="rounded-3xl bg-main-light-blue-grey w-72 h-36">
+                    <div class="border border-main-orange-yellow rounded-t-3xl bg-main-faded-blue w-72 h-9">
+                        <p class="border text-center text-2xl text-white relative left-10"><%= level.name %></p>
+                        <div class="border border-green-900 relative top-7 left-12">
+                            <p class="relative  text-main-levelText text-center text-4xl"><%= level.text %></p>
+                        </div>
+                        <div class="border border-red-700 relative -top-20 grid grid-cols-7 justify-items-center">
+                            <div class="rounded-full bg-main-gloves-blue w-36 h-36 shadow-2xl" style="box-shadow: 2px 2px 2px 3px rgba(0, 0, 0, 0.2);">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+<% }) %>
