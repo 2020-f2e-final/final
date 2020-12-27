@@ -8,3 +8,7 @@ body {
   text-shadow: $nsize $nsize 0$color, $psize $nsize 0 $color, $nsize $psize 0 $color,
     $psize $psize 0 $color;
 }
+
+.text-indent {
+  text-indent: var(--text-indent, 2em);
+}

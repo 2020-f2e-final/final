@@ -1,1 +1,42 @@
-<h1>cars</h1>
+<div class="w-full overflow-hidden">
+  <div x-data="cars()" x-init="init" class="mt-8 lg:mt-14 mx-auto w-11/12 sm:w-4/5 md:w-2/3 max-w-screen-sm lg:max-w-screen-md lg:px-4">
+    <div class="flex justify-between">
+      <% data.carTypes.forEach((type, i) => { %> 
+        <p 
+          x-on:click="selected = <%= i %>" 
+          class="cursor-pointer text-main-light-blue-grey text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-medium lg:font-bold tracking-wider"
+          :class="{
+            'opacity-30': selected !== <%= i %>
+          }"
+        >
+          <%= type.typeName %>
+        </p>
+      <% }) %> 
+    </div>
+    <% data.carTypes.forEach((type, i) => { %> 
+      <div x-show="selected === <%= i %>">
+        <% type.cars.forEach((car) => { %> 
+          <%- include('car-block-desktop', { car }) %> 
+          <%- include('car-block-mobile', { car }) %> 
+        <% }) %> 
+      </div>
+    <% }) %> 
+  </div>
+</div>
+<script>
+  function cars () {
+    return {
+      selected: 0,
+      init () {
+        this.$watch('selected', () => this.resetWOW())
+      },
+      resetWOW () {
+        wow.init()
+        this.$nextTick(() => {
+          window.scrollTo(0, 1)
+          window.scrollTo(0, 0)
+        })
+      }
+    }
+  }
+</script>
