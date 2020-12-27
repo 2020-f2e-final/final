@@ -4,7 +4,7 @@
         <div class="{ 'active': tab === 'bb' } cursor-pointer bg-main-black-blue rounded-lg text-white hover:bg-main-light-blue-grey p-2" @click="tab = 'bb'">競速模式</div>
         <div class="{ 'active': tab === 'cc' } cursor-pointer bg-main-black-blue rounded-lg text-white hover:bg-main-light-blue-grey p-2" @click="tab = 'cc'">排位賽</div>
         <div class="{ 'active': tab === 'dd' } cursor-pointer bg-main-black-blue rounded-lg text-white hover:bg-main-light-blue-grey p-2" @click="tab = 'dd'">故事模式</div>
-        <div class="{ 'active': tab === 'dd' } cursor-pointer bg-main-black-blue rounded-lg text-white hover:bg-main-light-blue-grey p-2" @click="tab = 'ff'">計時賽</div>
+        <div class="{ 'active': tab === 'ff' } cursor-pointer bg-main-black-blue rounded-lg text-white hover:bg-main-light-blue-grey p-2" @click="tab = 'ff'">計時賽</div>
     </div>
     <div>
         <div x-show="tab === 'aa'"><%- include('casual') %></div>
