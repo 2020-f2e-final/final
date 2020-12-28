@@ -1,19 +1,45 @@
+<div class="pb-10">
+    <div class="bg-main-light-blue-grey">
+        <div class="flex flex-wrap justify-evenly">
+            <div class="text-3xl text-main-title-blue p-8">在故事模式中，完成任務目標後將獲得豐富的經驗和酷幣獎勵，此外在BOSS關卡完成5星任務即可獲得限時海盜船長車手，每章星星累計到一定數量還有限時服飾套裝等著你哦，一旦領取將不能重複獲得，但是再次挑戰成功後仍可獲得少量經驗哦。</div>
+        </div>
+    </div>
+    <div class="pt-12">
+        <div class="pt-8 pl-8 text-8xl text-main-light-blue-grey">
+            <div class="col-start-2">玩法</div>
+        </div>
+        <div class="bg-main-light-blue-grey">
+            <div class="flex flex-wrap justify-evenly">
+                <div class="text-3xl text-main-title-blue p-8">故事模式除了常規的競速賽、道具賽和無限加速外，還包含限時賽、淘汰賽、追擊賽、逃脫賽、時間挑戰賽、收集賽、鑽門模式、清障模式等特有玩法。</div>
+            </div>
+            <div class="grid grid-cols-5 gap-4 pt-8 pb-8 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 justify-items-center">
+                <% data.mode.story.forEach((s)=> { %>
+                    <div class="text-2xl text-main-t-gray p-2">● <%= s.typeName %></div>
+                <% }) %>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
 <div>
+    <div class="pt-8 pl-8 text-8xl text-main-light-blue-grey">
+        <div class="col-start-2">規則</div>
+    </div>
     <% data.mode.story.forEach((s)=> { %>
         <div class="mb-8 bg-main-light-blue-grey relative">
             <div class="text-main-title-blue text-6xl pt-8 pl-24">
-                <b><%= s.typeName %></b>
+                <b><i><%= s.typeName %></i></b>
             </div>
             <div class="w-4/5 mx-auto">
                 <hr class="border-main-title-blue border-4">
             </div>
         
-            <div class="flex flex-wrap justify-evenly">
-                <div class="w-1/3 mx-auto p-8">
-                    <div><img src="images/<%= s.Img %> " alt="" /></div>
-                </div>
+            <div class="flex flex-wrap justify-center">
 
-                <div class="text-main-title-blue text-3xl w-2/3 mx-auto pb-10 pt-8">
+                <div class="mx-auto p-8"><img src="images/<%= s.Img %> " alt="" /></div>
+                
+                <div class="text-main-title-blue text-3xl w-2/3 mx-auto pb-10 pt-8 justify-items-center">
                     <%= s.intro %>
                 </div>
             </div>
