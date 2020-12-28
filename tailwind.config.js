@@ -40,6 +40,13 @@ module.exports = {
         'pinky-purple':'#bf54cb',  //史詩級&高級
         'orange-yellow':'#fca000', //傳說級
         'rare-blue':'#4b9ff7', //稀有&進階
+        'role-rare-blue':'#7fa7dB', //人物稀有
+        'role-epic-purple':'#9E7FDB', //人物史詩
+        'role-legend-orange':'#E4C081', //人物傳說
+        'role-gray':'#989898', //人物介紹-灰色
+        'role-name':'#334666',//人物名字
+        'map-diff':'#8ea9d8',//難度多少星
+        'map-star':'#748fbe',//難度多少★
       }
     },
     spacing: {
