@@ -1,9 +1,9 @@
 <div x-data="{ tttab: 'aa' }">
     <div class="flex justify-between">
-        <div :class="{ 'active': tttab === 'aa' }" class="cursor-pointer hover:text-white text-main-light-blue-grey text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-medium lg:font-bold tracking-wider opacity-30" @click="tttab = 'aa'">個人競速</div>
-        <div :class="{ 'active': tttab === 'bb' }" class="cursor-pointer hover:text-white text-main-light-blue-grey text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-medium lg:font-bold tracking-wider opacity-30" @click="tttab = 'bb'">組隊競速</div>
+        <div :class="{ 'text-opacity-100': tttab === 'aa'}" class="cursor-pointer hover:text-white text-main-light-blue-grey text-opacity-30 text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-medium lg:font-bold tracking-wider" @click="tttab = 'aa'">個人競速</div>
+        <div :class="{ 'text-opacity-100': tttab === 'bb' }" class="cursor-pointer hover:text-white text-main-light-blue-grey text-opacity-30 text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-medium lg:font-bold tracking-wider" @click="tttab = 'bb'">組隊競速</div>
     </div>
     <div>
         <div x-show="tttab === 'aa'"><%- include('speeditem/pitem') %></div>
-        <div x-show="tttab === 'bb'">組隊</div>
+        <div x-show="tttab === 'bb'"><%- include('speeditem/titem') %></div>
 </div>

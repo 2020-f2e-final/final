@@ -1,9 +1,9 @@
 <div x-data="{ ttab: 'aa' }">
     <div class="flex justify-between text-7xl">
-        <div :class="{ 'active': ttab === 'aa' }" class="cursor-pointer hover:text-white text-main-light-blue-grey text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium lg:font-bold tracking-wider opacity-30" @click="ttab = 'aa'">道具賽</div>
-        <div :class="{ 'active': ttab === 'bb' }" class="cursor-pointer hover:text-white text-main-light-blue-grey text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium lg:font-bold tracking-wider opacity-30" @click="ttab = 'bb'">寵物</div>
-        <div :class="{ 'active': ttab === 'cc' }" class="cursor-pointer hover:text-white text-main-light-blue-grey text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium lg:font-bold tracking-wider opacity-30" @click="ttab = 'cc'">接力賽</div>
-        <div :class="{ 'active': ttab === 'dd' }" class="cursor-pointer hover:text-white text-main-light-blue-grey text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium lg:font-bold tracking-wider opacity-30" @click="ttab = 'dd'">無限加速</div>
+        <div :class="{ 'text-opacity-100': ttab === 'aa' }" class="cursor-pointer hover:text-white text-main-light-blue-grey text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium lg:font-bold tracking-wider text-opacity-30" @click="ttab = 'aa'">道具賽</div>
+        <div :class="{ 'text-opacity-100': ttab === 'bb' }" class="cursor-pointer hover:text-white text-main-light-blue-grey text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium lg:font-bold tracking-wider text-opacity-30" @click="ttab = 'bb'">寵物</div>
+        <div :class="{ 'text-opacity-100': ttab === 'cc' }" class="cursor-pointer hover:text-white text-main-light-blue-grey text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium lg:font-bold tracking-wider text-opacity-30" @click="ttab = 'cc'">接力賽</div>
+        <div :class="{ 'text-opacity-100': ttab === 'dd' }" class="cursor-pointer hover:text-white text-main-light-blue-grey text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-medium lg:font-bold tracking-wider text-opacity-30" @click="ttab = 'dd'">無限加速</div>
     </div>
     <div class="">
         <div x-show="ttab === 'aa'">
