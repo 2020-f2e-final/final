@@ -1,7 +1,7 @@
 <h1>maps</h1>
 
-<div class="w-11/12 sm:w-2/3 md:w-2/3 xl:w-4/5 mx-auto">
-    <div class="flex justify-evenly items-center my-20 p-8">
+<div class="w-11/12 sm:w-4/5 md:w-2/3 xl:w-4/5 mx-auto">
+    <div class="flex justify-evenly items-center mt-20 mb-36 p-8">
         <% data.mapStars.forEach((s, i) => { %>
             <div class="border border-dashed">
                 <div class="flex justify-center text-3xl text-main-map-diff "><%= s.diff %></div>
@@ -9,4 +9,5 @@
             </div>
             <% }) %>
     </div>
+    <div><%- include('s1') %></div>
 </div>

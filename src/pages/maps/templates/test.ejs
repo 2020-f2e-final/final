@@ -1,0 +1,31 @@
+<div x-data="{ tab: 's1' }">
+    <div :class="{ 'active': tab === 's1' }" @click="tab = 's1'">s1</div>
+    <div :class="{ 'active': tab === 's2' }" @click="tab = 's2'">s2</div>
+
+    <div x-show="tab === 's1'">Tab Foo</div>
+    <div x-show="tab === 's2'">Tab Bar</div>
+</div>
+
+
+<div class="mt-8 lg:mt-14 mx-auto w-11/12 sm:w-4/5 md:w-2/3 max-w-screen-sm lg:max-w-screen-md lg:px-4" x-data="{ tab: 'base' }">
+    <div class="cursor-pointer pb-24 flex items-end">
+        <div class="" 
+        :class="{ 'text-opacity-25': tab !== 'base','text-5xl': tab !== 'base'}">
+            <div :class="{ 'text-opacity-100': tab === 'base', 'text-7xl': tab === 'base'}" @click="tab = 'base'">
+                基礎
+            </div>
+        </div>
+        <div class="text-main-light-blue-grey mr-10 flex space-x-4 hover:text-opacity-100" 
+        :class="{ 'text-opacity-25': tab !== 'animal','text-5xl': tab !== 'animal'}">
+            <div :class="{ 'text-opacity-100': tab === 'animal','text-7xl': tab === 'animal'}" @click="tab = 'animal'">
+                動物
+            </div>    
+        </div>
+    </div>
+
+    <div x-show="tab === 'base'">
+        <%- include('base') %>
+    </div>
+    <div x-show="tab === 'animal'">
+        <%- include('animal') %></div>
+</div>
