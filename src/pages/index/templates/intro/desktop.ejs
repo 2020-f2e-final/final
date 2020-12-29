@@ -1,10 +1,12 @@
 <% data.intro.forEach((item, index) => { %>
-<div
-  class="hidden xl:flex mt-14 mx-auto w-2/3<%= index === 1 ? ' flex-row-reverse' : '' %>"
+<div data-wow-offset="200"
+  class="wow hidden xl:flex mt-14 mx-auto w-2/3<%= index === 1 ? ' flex-row-reverse animate__fadeInLeft' : ' animate__fadeInRight' %>"
 >
-  <div class="flex h-72 w-4/5<%= index === 1 ? ' flex-row-reverse' : '' %>">
+  <div 
+  class="flex h-72 w-4/5<%= index === 1 ? ' flex-row-reverse' : '' %>">
     <div
       class="<%= index === 1 ? 'rounded-r-full pl-8' : 'rounded-l-full pr-8' %> intro-bg-gradient"
+      style="box-shadow: 0 0.1rem 0.1rem 0 rgba(0, 0, 0, 0.2);"
     >
       <div
         class="h-72 w-72 rounded-full bg-cover bg-center"
@@ -16,7 +18,7 @@
     </div>
     <div
       class="flex-grow intro-bg-gradient <%= index === 1 ? 'pl-8' : 'pr-8' %>"
-      style="<%= index === 1 ? 'border-radius: 3rem 0 0 3rem;' : 'border-radius: 0 3rem 3rem 0;' %>"
+      style="<%= index === 1 ? 'border-radius: 3rem 0 0 3rem; box-shadow: -0.1rem 0.1rem 0.1rem 0 rgba(0, 0, 0, 0.2);' : 'border-radius: 0 3rem 3rem 0; box-shadow: 0.1rem 0.1rem 0.1rem 0 rgba(0, 0, 0, 0.2);' %>"
     >
       <p
         class="flex flex-col justify-center h-4/5 text-main-cadet-blue text-xl"
