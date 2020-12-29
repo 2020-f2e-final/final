@@ -7,13 +7,15 @@
   <title><%= data.title %></title>
   <meta name="description" content="<%= data.description %>">
   </meta>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://cdn.jsdelivr.net/npm/@mdi/font@5.8.55/css/materialdesignicons.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
 </head>
 
-<body class="min-h-screen bg-main-cadet-blue">
+<body class="min-h-screen relative">
+  <%- include('background') %>
   <%- include('nav') %>
   <%- include('top') %>
 
