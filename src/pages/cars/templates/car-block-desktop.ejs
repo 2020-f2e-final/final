@@ -1,20 +1,20 @@
 <div class="mb-24 hidden lg:flex flex-col items-end">
   <div class="relative flex flex-col items-end p-4 bg-main-light-blue-grey h-72 w-full">
-    <p class="text-main-title-blue text-5xl"><%= car.name %></p>
-    <p class="w-7/12 lg:w-1/2 mt-4 text-indent"><%= car.intro %></p>
+    <p data-wow-offset="250" class="wow animate__fadeIn text-main-title-blue text-5xl"><%= car.name %></p>
+    <p data-wow-offset="250" class="wow animate__fadeIn w-7/12 lg:w-1/2 mt-4 text-indent"><%= car.intro %></p>
     <img data-wow-offset="300" class="wow animate__bounceInRight absolute w-96 h-auto -left-20 -bottom-1/2" src="images/<%= car.carImg %> " alt="">
     <div class="flex items-center justify-end bg-main-greyish-brown w-full h-28 -mr-4 mt-auto -mb-2 rounded-tl-full overflow-hidden">
       <div class="flex items-end">
         <% [['', ''], ['', ''], ['', ''], ['drift', '飄移'], ['acceleration', '加速度'],['curve', '彎道'], ['accelerationTime', '加速<br>時間'], ['gasGatheringSpeed', '集氣<br>速度']].forEach(([key, text]) => { %>
         <div class="text-center w-16 ml-2">
           <% if (text) { %>
-            <p class="text-white font-light"><%- text %></p>
+            <p data-wow-delay="0.5s" data-wow-offset="250" class="wow animate__fadeIn text-white font-light"><%- text %></p>
           <% } else { %>
             <p class="text-transparent font-light select-none">QAQ</p>
           <% } %> 
           <div class="inline-block bg-white my-2 w-10 h-0.5"></div>
           <% if (text) { %>
-            <p class="text-white font-light"><%= car[key] %> </p>
+            <p data-wow-delay="0.5s" data-wow-offset="200" class="wow animate__fadeIn text-white font-light"><%= car[key] %> </p>
           <% } else { %>
             <p class="text-transparent font-light select-none">QAQ</p>
           <% } %>

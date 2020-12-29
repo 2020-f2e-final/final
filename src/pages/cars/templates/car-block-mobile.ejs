@@ -10,16 +10,16 @@
           <span class="px-3 py-1 font-light text-lg text-white tracking-widest bg-main-greyish-brown">可塗裝</span>
         <% } %> 
       </div>
-      <p class="mt-2 text-center text-main-title-blue text-3xl"><%= car.name %></p>
-      <p class="text-indent w-full mt-3"><%= car.intro %></p>
+      <p data-wow-offset="200" class="wow animate__fadeIn mt-2 text-center text-main-title-blue text-3xl"><%= car.name %></p>
+      <p data-wow-offset="200" class="wow animate__fadeIn text-indent w-full mt-3"><%= car.intro %></p>
     </div>
     <div class="flex items-center justify-center bg-main-greyish-brown w-full h-28 mt-auto overflow-hidden">
       <div class="flex items-end">
         <% [['drift', '飄移'], ['acceleration', '加速度'],['curve', '彎道'], ['accelerationTime', '加速<br>時間'], ['gasGatheringSpeed', '集氣<br>速度']].forEach(([key, text]) => { %>
         <div class="text-center w-16 px-2">
-          <p class="text-white font-thin"><%- text %></p>
+          <p data-wow-delay="0.5s" data-wow-offset="100" class="wow animate__fadeIn text-white font-thin"><%- text %></p>
           <div class="inline-block bg-white my-2 w-10 h-0.5"></div>
-          <p class="text-white font-thin"><%= car[key] %> </p>
+          <p data-wow-delay="0.5s" class="wow animate__fadeIn text-white font-thin"><%= car[key] %> </p>
         </div>
         <% }) %> 
       </div>
