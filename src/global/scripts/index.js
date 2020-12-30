@@ -15,7 +15,7 @@ function scrollToElementById (id) {
   const el = document.querySelector(`#${id}`)
   if (!el || !nav) return
   window.scrollTo({
-    top: el.getBoundingClientRect().y - nav.getBoundingClientRect().height,
+    top: el.getBoundingClientRect().top + window.scrollY - nav.getBoundingClientRect().height,
     behavior: 'smooth'
   })
 }
