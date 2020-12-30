@@ -1,10 +1,31 @@
-<div x-data="{ tab: 'aa' }">
-    <div class="flex justify-between text-5xl pb-12">
+<div x-data="{ open: false, tab: 'aa' }">
+    <div class="hidden xl:flex justify-between text-5xl pb-12">
         <div :class="{ 'bg-opacity-100': tab === 'aa' }" class="bg-opacity-30 text-3xl sm:p-1 md:p-1 md:rounded-lg lg:text-4xl lg:rounded-lg xl:text-5xl xl:rounded-lg font-medium lg:font-bold tracking-wider cursor-pointer bg-main-light-blue-grey text-main-black-blue hover:bg-white p-2" @click="tab = 'aa'">休閒模式</div>
         <div :class="{ 'bg-opacity-100': tab === 'bb' }" class="bg-opacity-30 text-3xl sm:p-1 md:p-1 md:rounded-lg lg:text-4xl lg:rounded-lg xl:text-5xl xl:rounded-lg font-medium lg:font-bold tracking-wider cursor-pointer bg-main-light-blue-grey text-main-black-blue hover:bg-white p-2" @click="tab = 'bb'">競速模式</div>
         <div :class="{ 'bg-opacity-100': tab === 'cc' }" class="bg-opacity-30 text-3xl sm:p-1 md:p-1 md:rounded-lg lg:text-4xl lg:rounded-lg xl:text-5xl xl:rounded-lg font-medium lg:font-bold tracking-wider cursor-pointer bg-main-light-blue-grey text-main-black-blue hover:bg-white p-2" @click="tab = 'cc'">排位賽</div>
         <div :class="{ 'bg-opacity-100': tab === 'dd' }" class="bg-opacity-30 text-3xl sm:p-1 md:p-1 md:rounded-lg lg:text-4xl lg:rounded-lg xl:text-5xl xl:rounded-lg font-medium lg:font-bold tracking-wider cursor-pointer bg-main-light-blue-grey text-main-black-blue hover:bg-white p-2" @click="tab = 'dd'">故事模式</div>
         <div :class="{ 'bg-opacity-100': tab === 'ff' }" class="bg-opacity-30 text-3xl sm:p-1 md:p-1 md:rounded-lg lg:text-4xl lg:rounded-lg xl:text-5xl xl:rounded-lg font-medium lg:font-bold tracking-wider cursor-pointer bg-main-light-blue-grey text-main-black-blue hover:bg-white p-2" @click="tab = 'ff'">計時賽</div>
+    </div>
+    <div class="xl:hidden pb-12">
+        <div class="bg-opacity-30 text-3xl sm:p-1 md:p-1 md:rounded-lg lg:text-4xl lg:rounded-lg xl:text-5xl xl:rounded-lg font-medium lg:font-bold tracking-wider cursor-pointer bg-main-light-blue-grey text-main-black-blue hover:bg-white p-2 " @click="open = true">遊戲模式</div>
+    
+        <ul x-show="open" @click.away="open = false">
+            <li>
+                <p class="bg-opacity-30 text-3xl sm:p-1 md:p-1 md:rounded-lg lg:text-4xl lg:rounded-lg xl:text-5xl xl:rounded-lg font-medium lg:font-bold tracking-wider cursor-pointer bg-main-light-blue-grey text-main-black-blue hover:bg-white p-2" @click="tab = 'aa'">休閒模式</p>
+            </li>
+            <li>
+                <p class="bg-opacity-30 text-3xl sm:p-1 md:p-1 md:rounded-lg lg:text-4xl lg:rounded-lg xl:text-5xl xl:rounded-lg font-medium lg:font-bold tracking-wider cursor-pointer bg-main-light-blue-grey text-main-black-blue hover:bg-white p-2" @click="tab = 'bb'">競速模式</p>
+            </li>
+            <li>
+                <p class="bg-opacity-30 text-3xl sm:p-1 md:p-1 md:rounded-lg lg:text-4xl lg:rounded-lg xl:text-5xl xl:rounded-lg font-medium lg:font-bold tracking-wider cursor-pointer bg-main-light-blue-grey text-main-black-blue hover:bg-white p-2" @click="tab = 'cc'">排位賽</p>
+            </li>
+            <li>
+                <p class="bg-opacity-30 text-3xl sm:p-1 md:p-1 md:rounded-lg lg:text-4xl lg:rounded-lg xl:text-5xl xl:rounded-lg font-medium lg:font-bold tracking-wider cursor-pointer bg-main-light-blue-grey text-main-black-blue hover:bg-white p-2" @click="tab = 'dd'">故事模式</p>
+            </li>
+            <li>
+                <p class="bg-opacity-30 text-3xl sm:p-1 md:p-1 md:rounded-lg lg:text-4xl lg:rounded-lg xl:text-5xl xl:rounded-lg font-medium lg:font-bold tracking-wider cursor-pointer bg-main-light-blue-grey text-main-black-blue hover:bg-white p-2" @click="tab = 'ff'">計時賽</p>
+            </li>
+        </ul>
     </div>
     <div>
         <div x-show="tab === 'aa'"><%- include('casual') %></div>
