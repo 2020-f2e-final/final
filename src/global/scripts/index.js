@@ -10,6 +10,30 @@ function bindGoTopBtn () {
   btn.addEventListener('click', onClickTop)
 }
 
+function scrollToElementById (id) {
+  const nav = document.querySelector('#nav')
+  const el = document.querySelector(`#${id}`)
+  if (!el || !nav) return
+  window.scrollTo({
+    top: el.offsetTop - nav.getBoundingClientRect().height,
+    behavior: 'smooth'
+  })
+}
+
+function bindHashAnchors () {
+  const currentHrefWithoutHash = window.location.href.replace(/#.*/, '')
+  Array.from(document.querySelectorAll('a'))
+    .filter((a) => a.href.startsWith(currentHrefWithoutHash) && a.href.includes('#'))
+    .forEach((a) => {
+      const id = a.href.split('#')[1]
+      a.onclick = (e) => {
+        e.preventDefault()
+        scrollToElementById(id)
+      }
+    })
+}
+
 (() => {
   bindGoTopBtn()
+  bindHashAnchors()
 })()
