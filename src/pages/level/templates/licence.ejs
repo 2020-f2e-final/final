@@ -1,0 +1,49 @@
+<div x-data="licence()" class="mx-auto w-10/12">  
+    <div class="flex mt-6">
+        <div class="w-1/2">
+        </div>
+        <div class="flex w-1/2">
+            <% data.licenceTypes.forEach((type) =>{%>
+                <div class="w-1/6 text-2xl text-white cursor-pointer hover:text-main-levelTitle-dark" @click="scrollTo('<%= type.typeName %>')"><%= type.typeName %></div>
+                <% }) %> 
+        </div>
+    </div>
+
+    <% data.licenceTypes.forEach((type, i) => { %>
+        <div id="<%= type.typename %>">
+            <div class="mt-14">
+                <div class="mb-7 relative left-2 text-5xl text-white sm:underline"><%= type.typename %></div>
+            </div>
+            <div class="flex flex-wrap justify-center">
+                    <div class="w-full relative py-12 pl-80 mb-6">
+                        <div class="flex flex-wrap relative rounded-3xl bg-main-faded-blue h-48">
+                            <div class="w-96 pl-16">
+                                <% type.mission.forEach((mission, i) => { %>
+                                    <div class="">
+
+                                    </div>
+                                <% }) %>
+                            </div>
+                        </div>
+                        <div class="mx-auto absolute top-0 left-0 w-1/2 pr-10">
+                            <img class="" src="images/<%= type.typeImg %> " alt="">
+                        </div>
+                    </div>
+            </div>
+        </div>
+    <% }) %>
+</div>
+
+<script>
+    function licence() {
+        return {
+            scrollTo (typename) {
+                window.scrollTo({
+                    top: document.querySelector('#' + typename).offsetTop - 100,
+                    left: 0,
+                    behavior: 'smooth'
+                })
+            }
+        }
+    }
+    </script>
