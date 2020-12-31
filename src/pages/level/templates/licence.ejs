@@ -16,19 +16,64 @@
             </div>
             <div class="flex flex-wrap justify-center">
                     <div class="w-full relative py-12 pl-80 mb-6">
-                        <div class="flex flex-wrap relative rounded-3xl bg-main-faded-blue h-48">
-                            <div class="w-96 pl-16">
+                        <div class="relative rounded-3xl bg-main-faded-blue h-48">
+                            <div class="flex flex-wrap w-full pl-48">
                                 <% type.mission.forEach((mission, i) => { %>
-                                    <div class="">
-
+                                    <div class="flex w-1/2 mt-2 mb-6 ">
+                                        <div class="rounded-full h-3 w-3 my-auto mx-2 bg-white">
+                                        </div>
+                                        <div class="text-white text-3xl"><a href="level.html/#<%= mission.title %>"><%= mission.title %></a></div>
                                     </div>
                                 <% }) %>
                             </div>
                         </div>
-                        <div class="mx-auto absolute top-0 left-0 w-1/2 pr-10">
+                        <div class="my-auto absolute top-0 left-0 w-1/2 pr-10">
                             <img class="" src="images/<%= type.typeImg %> " alt="">
                         </div>
                     </div>
+                    <% type.mission.forEach((mission, i) => { %>
+                        <% if(i % 2 == 0){ %>
+                            <div id="<%= mission.title %>" class="w-10/12 mx-auto relative py-12 pr-96 mb-8">
+                                <div class="bg-main-light-blue-grey h-48">
+                                    <div class="my-auto">
+                                        <div class="flex">
+                                            <img class="h-14 w-14 my-auto mx-2" src="images/<%= mission.star %> " alt="">
+                                            <div class="text-main-levelText text-3xl my-auto"><%= mission.text1 %></div>
+                                        </div>
+                                        <% if(mission.text2 != "None"){ %>
+                                            <div class="flex">
+                                                <img class="h-14 w-14 my-auto mx-2" src="images/<%= mission.star %> " alt="">
+                                                <div class="text-main-levelText text-3xl my-auto"><%= mission.text2 %></div>
+                                            </div>
+                                        <% } %>
+                                    </div>
+                                </div>
+                                <div class="absolute top-0 right-0 w-1/2">
+                                    <img class="h-72" src="images/<%= mission.map %> " alt="">
+                                </div>
+                            </div>
+                        <% } else{ %>  
+                            <div class="w-10/12 mx-auto relative py-12 pl-96 mb-8">
+                                <div class="bg-main-light-blue-grey h-48">
+                                    <div class="ml-12">
+                                        <div class="flex">
+                                            <img class="h-14 w-14 my-auto mx-2" src="images/<%= mission.star %> " alt="">
+                                            <div class="text-main-levelText text-3xl my-auto"><%= mission.text1 %></div>
+                                        </div>
+                                        <% if(mission.text2 != "None"){ %>
+                                            <div class="flex">
+                                                <img class="h-14 w-14 my-auto mx-2" src="images/<%= mission.star %> " alt="">
+                                                <div class="text-main-levelText text-3xl my-auto"><%= mission.text2 %></div>
+                                            </div>
+                                        <% } %>
+                                    </div>
+                                </div>
+                                <div class="absolute top-0 left-0 w-1/2 ">
+                                    <img class="h-72" src="images/<%= mission.map %> " alt="">
+                                </div>
+                            </div>
+                        <% } %>
+                    <% }) %>
             </div>
         </div>
     <% }) %>
