@@ -1,16 +1,16 @@
-<div x-data="licence()" class="mx-auto w-10/12">  
+<div class="mx-auto w-10/12">  
     <div class="flex mt-6">
         <div class="w-1/2">
         </div>
         <div class="flex w-1/2">
             <% data.licenceTypes.forEach((type) =>{%>
-                <div class="w-1/6 text-2xl text-white cursor-pointer hover:text-main-levelTitle-dark" @click="scrollTo('<%= type.typeName %>')"><%= type.typeName %></div>
+                <div class="w-1/6 text-2xl text-white cursor-pointer hover:text-main-levelTitle-dark"><a href="level.html/#<%= type.typeId %>"><%= type.typeName %></a></div>
                 <% }) %> 
         </div>
     </div>
 
     <% data.licenceTypes.forEach((type, i) => { %>
-        <div id="<%= type.typename %>">
+        <div id="<%= type.typeId %>">
             <div class="mt-14">
                 <div class="mb-7 relative left-2 text-5xl text-white sm:underline"><%= type.typename %></div>
             </div>
@@ -22,7 +22,7 @@
                                     <div class="flex w-1/2 mt-2 mb-6 ">
                                         <div class="rounded-full h-3 w-3 my-auto mx-2 bg-white">
                                         </div>
-                                        <div class="text-white text-3xl"><a href="level.html/#<%= mission.title %>"><%= mission.title %></a></div>
+                                        <div class="text-white text-3xl"><a href="level.html/#<%= mission.id %>"><%= mission.title %></a></div>
                                     </div>
                                 <% }) %>
                             </div>
@@ -33,19 +33,24 @@
                     </div>
                     <% type.mission.forEach((mission, i) => { %>
                         <% if(i % 2 == 0){ %>
-                            <div id="<%= mission.title %>" class="w-10/12 mx-auto relative py-12 pr-96 mb-8">
-                                <div class="bg-main-light-blue-grey h-48">
-                                    <div class="my-auto">
+                            <div id="<%= mission.id %>" class="w-10/12 mx-auto relative py-12 pr-96 mb-8">
+                                <div class="bg-main-light-blue-grey h-48 flex items-center">
+                                    <div >
                                         <div class="flex">
                                             <img class="h-14 w-14 my-auto mx-2" src="images/<%= mission.star %> " alt="">
-                                            <div class="text-main-levelText text-3xl my-auto"><%= mission.text1 %></div>
+                                            <div class="text-main-levelText text-3xl font-light my-auto"><%= mission.text1 %></div>
                                         </div>
                                         <% if(mission.text2 != "None"){ %>
                                             <div class="flex">
                                                 <img class="h-14 w-14 my-auto mx-2" src="images/<%= mission.star %> " alt="">
-                                                <div class="text-main-levelText text-3xl my-auto"><%= mission.text2 %></div>
+                                                <div class="text-main-levelText text-3xl font-light my-auto"><%= mission.text2 %></div>
                                             </div>
                                         <% } %>
+                                    </div>
+                                </div>
+                                <div class="absolute top-2 left-0 w-1/2 h-14">
+                                    <div class="bg-main-missionTitle h-16 w-80 transform -rotate-3 mx-auto flex items-center" style ="box-shadow: 2px 2px 6px 4px rgba(0, 0, 0, 0.479)">
+                                        <p class="text-main-levelText text-3xl font-medium mx-auto"><%= mission.title%> </p>
                                     </div>
                                 </div>
                                 <div class="absolute top-0 right-0 w-1/2">
@@ -53,19 +58,24 @@
                                 </div>
                             </div>
                         <% } else{ %>  
-                            <div class="w-10/12 mx-auto relative py-12 pl-96 mb-8">
-                                <div class="bg-main-light-blue-grey h-48">
+                            <div id="<%= mission.id %>" class="w-10/12 mx-auto relative py-12 pl-96 mb-8">
+                                <div class="bg-main-light-blue-grey h-48 flex items-center">
                                     <div class="ml-12">
                                         <div class="flex">
                                             <img class="h-14 w-14 my-auto mx-2" src="images/<%= mission.star %> " alt="">
-                                            <div class="text-main-levelText text-3xl my-auto"><%= mission.text1 %></div>
+                                            <div class="text-main-levelText text-3xl font-light my-auto"><%= mission.text1 %></div>
                                         </div>
                                         <% if(mission.text2 != "None"){ %>
                                             <div class="flex">
                                                 <img class="h-14 w-14 my-auto mx-2" src="images/<%= mission.star %> " alt="">
-                                                <div class="text-main-levelText text-3xl my-auto"><%= mission.text2 %></div>
+                                                <div class="text-main-levelText text-3xl font-light my-auto"><%= mission.text2 %></div>
                                             </div>
                                         <% } %>
+                                    </div>
+                                </div>
+                                <div class="absolute top-2 right-0 w-1/2 h-14">
+                                    <div class="bg-main-missionTitle h-16 w-80 transform -rotate-3 mx-auto flex items-center" style ="box-shadow: 2px 2px 6px 4px rgba(0, 0, 0, 0.479)">
+                                        <p class="text-main-levelText text-3xl font-medium mx-auto"><%= mission.title%> </p>
                                     </div>
                                 </div>
                                 <div class="absolute top-0 left-0 w-1/2 ">
@@ -78,17 +88,3 @@
         </div>
     <% }) %>
 </div>
-
-<script>
-    function licence() {
-        return {
-            scrollTo (typename) {
-                window.scrollTo({
-                    top: document.querySelector('#' + typename).offsetTop - 100,
-                    left: 0,
-                    behavior: 'smooth'
-                })
-            }
-        }
-    }
-    </script>
