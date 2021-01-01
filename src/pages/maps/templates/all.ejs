@@ -1,0 +1,13 @@
+<div>
+    <% data.mapStars.forEach((s, i) => { %>
+        <div class="mb-40">
+            <div class="grid grid-cols-2 grid-space-4 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:max-w-screen-xl
+            py-10 mx-auto relative border-t-2 border-b-2">
+                <p class="text-5xl text-main-light-blue-grey absolute -top-16 mx-auto"><%= s.star %></p>
+                <% s.maps.forEach((map) => { %>
+                    <img src="images/<%= map.img %>" alt="oops!">
+                <% }) %>
+            </div>
+        </div>
+    <% }) %>
+</div>
