@@ -14,7 +14,7 @@
             </div>
             <div class="grid grid-cols-2 gap-4 pt-8 pb-8 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-5  justify-items-center">
                 <% data.mode.story.forEach((s)=> { %>
-                    <div class="text-2xl text-main-t-gray p-2">● <%= s.typeName %></div>
+                    <a href="gamemodes.html/#<%= s.id %>"><div class="text-2xl text-main-t-gray p-2">● <%= s.typeName %></div></a>
                 <% }) %>
                 
             </div>
@@ -28,7 +28,7 @@
     </div>
     <% data.mode.story.forEach((s)=> { %>
         <div class="mb-8 bg-main-light-blue-grey relative">
-            <div class="text-main-title-blue text-6xl pt-8 pl-24">
+            <div class="text-main-title-blue text-6xl pt-8 pl-24" id="<%= s.id %>">
                 <b><i><%= s.typeName %></i></b>
             </div>
             <div class="w-4/5 mx-auto">
