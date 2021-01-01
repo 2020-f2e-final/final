@@ -45,8 +45,6 @@ module.exports = {
         'role-legend-orange':'#E4C081', //人物傳說
         'role-gray':'#989898', //人物介紹-灰色
         'role-name':'#334666',//人物名字
-        'map-diff':'#8ea9d8',//難度多少星
-        'map-star':'#748fbe',//難度多少★
       }
     },
     spacing: {
