@@ -1,6 +1,7 @@
 {
     "mapStars":[
         {
+            "id":"onestar",
             "diff":"難度一星",
             "star":"★✰✰✰✰",
             "maps":[
@@ -25,6 +26,7 @@
             ]
         },
         {
+            "id":"twostar",
             "diff":"難度二星",
             "star":"★★✰✰✰",
             "maps":[
@@ -70,6 +72,7 @@
             ]
         },
         {
+            "id":"threestar",
             "diff":"難度三星",
             "star":"★★★✰✰",
             "maps":[
@@ -112,6 +115,7 @@
             ]
         },
         {
+            "id":"fourstar",
             "diff":"難度四星",
             "star":"★★★★✰",
             "maps":[
@@ -136,6 +140,7 @@
             ]
         },
         {
+            "id":"fivestar",
             "diff":"難度五星",
             "star":"★★★★★",
             "maps":[
