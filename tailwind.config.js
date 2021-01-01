@@ -51,6 +51,7 @@ module.exports = {
         'levelTitle-light':'#cccccc',//波波專屬色,等級駕照(亮)
         'levelTitle-dark':'#8A8A8A',//波波專屬色,等級駕照(暗)
         'levelText':'#4E6998',//波波專屬色,等級內文
+        'missionTitle':'#F2ECEC',//任務標題背景顏色
       }
     },
     spacing: {
