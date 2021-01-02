@@ -1,17 +1,27 @@
-<div class="py-12 flex justify-evenly">
-    <div class="grid grid-cols-2 justify-items-center gap-4 w-1/2 relative">
-        <div class="rounded-3xl bg-main-light-blue-grey w-96 h-36">
-            <div class="rounded-t-3xl bg-main-faded-blue w-96 h-9">
-                <p class="text-center text-3xl text-main-title-blue"><b>氮氣</b></p>
-                <div class="">
-                    <p class="text-white text-center text-2xl w-60">瞬間提高發動機功率，使賽車速度加快。</p>
+<div class="hidden pb-12 sm:grid xl:grid-cols-2">
+    <% data.mode.casual.toolitem.forEach((tool) => { %>
+        <div class="pt-10 pl-20 flex justify-around">
+            <div class="h-40 w-96 rounded-r-lg bg-main-light-blue-grey relative">
+                <div class="rounded-full h-40 w-40 bg-main-tool-bg-blue border-4 border-solid border-main-faded-blue absolute -left-20 shadow-lg grid justify-items-stretch">
+                    <div class="h-32 w-32 flex justify-self-center self-center"><img src="images/<%= tool.toolImg %>" alt=""></div>
                 </div>
-                <div class="absolute top-0 left-0 grid grid-cols-7 justify-items-center">
-                    <div class="relative rounded-full bg-main-gloves-blue w-36 h-36 shadow-2xl" style="box-shadow: 2px 2px 2px 3px rgba(0, 0, 0, 0.2);">
-                        <img class="absolute top-0 left-0" src="images/tool1.png" alt="">
-                    </div>
-                </div>
+                <p class="text-main-title-blue text-3xl font-bold text-center py-2"><%= tool.name %></p>
+                <p class="text-white text-1xl text-center bg-main-t-gray px-4 py-2 pl-20 h-24"><%= tool.intro %></p>
             </div>
         </div>
-    </div>
+    <% }) %>
+</div>
+<div class="pb-12 grid sm:hidden">
+    <% data.mode.casual.toolitem.forEach((tool) => { %>
+        <div class="pt-16 flex justify-around">
+            <div class="w-1/2 rounded-lg bg-main-light-blue-grey grid place-items-center relative">
+                <div class="rounded-full h-24 w-24 bg-main-tool-bg-blue border-4 border-solid border-main-faded-blue shadow-lg grid justify-items-stretch absolute -top-14">
+                    <div class="h-14 w-14 flex justify-self-center self-center"><img src="images/<%= tool.toolImg %>" alt=""></div>
+                </div>
+                <p class="pt-12 text-main-title-blue text-2xl font-bold text-center justify-self-center"><%= tool.name %></p>
+                
+                <p class="rounded-b-lg text-white text-1xl text-center bg-main-t-gray px-4 py-2"><%= tool.intro %></p>
+            </div>
+        </div>
+    <% }) %>
 </div>
