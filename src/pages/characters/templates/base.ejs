@@ -3,7 +3,7 @@
         <div class="relative mb-60 sm:mb-40">
             <div class="text-white font-light pt-16">
                 <div class="bg-main-light-blue-grey pr-2 sm:pr-36 pb-8">
-                    <div class="flex justify-center sm:justify-start items-end pl-5 sm:pl-10 md:pl-20 pr-8 py-5">
+                    <div class="flex justify-center sm:justify-start items-end pl-5 sm:pl-10 lg:pl-20 pr-8 py-5">
                         <p class="text-4xl sm:text-5xl text-main-role-name font-normal pr-5 sm:pr-8">
                             <%= character.name %>
                         </p>
@@ -24,14 +24,14 @@
                         <% } %>
                     </div>
                     <div class="flex justify-start bg-main-role-gray pr-2 sm:pr-28">
-                        <div class="sm:text-xl lg:text-2xl pl-5 sm:pl-10 md:pl-20 py-3">
+                        <div class="sm:text-xl lg:text-2xl pl-5 sm:pl-10 lg:pl-20 py-3">
                             <p class="py-1"><%= character.birth %></p>
                             <p class="py-1 pb-10"><%= character.temp %></p>
                             <p class="py-1 leading-loose"><%= character.intro %></p>
                         </div>
                     </div>
                 </div>
-                <div class="flex justify-start pl-5 sm:pl-10 md:pl-20 py-3 pr-2 sm:pr-48 md:pr-56 lg:pr-0">
+                <div class="pl-5 sm:pl-10 lg:pl-20 py-3 pr-2 sm:pr-48 md:pr-56 lg:pr-0">
                     <p class="sm:text-xl lg:text-2xl leading-loose tracking-wide">
                         <%= character.bonus %>
                     </p>
@@ -62,13 +62,14 @@
                             <div class="bg-main-role-rare-blue py-1 px-3 sm:hidden lg:block">
                                 <p class="flex items-start sm:text-2xl">稀有</p>
                             </div>
-                        <% } %> <% if (character.rarity === 2) { %>
-                        <div class="bg-main-role-epic-purple py-1 px-3 absolute right-10 top-3  hidden sm:block lg:hidden">
-                            <p class="flex items-start sm:text-2xl">史詩</p>
-                        </div>
-                        <div class="bg-main-role-epic-purple py-1 px-3 sm:hidden lg:block">
-                            <p class="flex items-start sm:text-2xl">史詩</p>
-                        </div>
+                        <% } %>
+                        <% if (character.rarity === 2) { %>
+                            <div class="bg-main-role-epic-purple py-1 px-3 absolute right-10 top-3  hidden sm:block lg:hidden">
+                                <p class="flex items-start sm:text-2xl">史詩</p>
+                            </div>
+                            <div class="bg-main-role-epic-purple py-1 px-3 sm:hidden lg:block">
+                                <p class="flex items-start sm:text-2xl">史詩</p>
+                            </div>
                         <% } %>
                     </div>
                     <div class="flex justify-start bg-main-role-gray pr-2 lg:pr-20" >
@@ -79,7 +80,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex justify-start pl-5 sm:pl-64 md:pl-80 my-3">
+                <div class="pl-5 sm:pl-64 md:pl-80 my-3">
                     <p class="sm:text-xl lg:text-2xl leading-loose tracking-wide">
                         <%= character.bonus %>
                     </p>
