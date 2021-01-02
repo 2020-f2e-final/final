@@ -1,98 +1,80 @@
-<% data.characterTypes.forEach((type, i) => { %>
-    <% if (i === 1) { %>
-    <% type.characters.forEach((character, j) => { %> 
-        <% if (j % 2 === 0) { %>
-            <div class="relative mb-40">
-                <div class="text-white font-light pt-16">
-                    <div class="bg-main-light-blue-grey pr-36 pb-8">
-                        <div class="flex justify-start items-end pl-20 pr-8 py-5 sm:pl-10">
-                            <p class="text-5xl text-main-role-name font-normal pr-8"><%= character.name %></p>
-                            <% if (character.rarity === 1) { %>
-                                <div class="bg-main-role-rare-blue py-1 px-3">
-                                    <p class="flex items-start text-2xl">稀有</p>
-                                </div>
-                            <% } %>
-                            <% if (character.rarity === 2) { %>
-                                <div class="bg-main-role-epic-purple py-1 px-3">
-                                    <p class="flex items-start text-2xl">史詩</p>
-                                </div>
-                            <% } %>
-                            <% if (character.rarity === 3) { %>
-                                <div class="bg-main-role-legend-orange py-1 px-3">
-                                    <p class="flex items-start text-2xl">傳說</p>
-                                </div>
-                            <% } %>
-                        </div>
-                        <div class="flex justify-start bg-main-role-gray pr-44">
-                            <div class="text-2xl pl-20 py-3 sm:pl-10">
-                                <p class="py-1"><%= character.birth %></p>
-                                <p class="py-1 pb-10"><%= character.temp %></p>
-                                <p class="py-1 leading-loose"><%= character.intro %></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="pt-3 sm:pl-10">
-                        <% character.bonus.forEach((bo, k) => { %>
-                            <div class="flex justify-start pl-10 pt-2">
-                                    <p class="pr-3 pt-2 ">◆ </p>
-                                    <p class="text-2xl py-1">
-                                        <%= bo %>
-                                    </p>
-                            </div>
-                        <% })%>
-                    </div>
-                </div>
-                <div class="absolute top-0 -right-32">
-                    <img style="height:500px" src="images/<%= character.img %>" alt="">
-                </div>
-            </div>
-            
-            <% } else { %>
-                <div class="relative mb-40">
-                    <div class="text-white font-light pt-16">
-                        <div class="bg-main-light-blue-grey pl-36 pb-8">
-                            <div class="flex justify-start items-end pl-44 pr-8 py-5 sm:pr-5">
-                                <p class="text-5xl text-main-role-name font-normal pr-5"><%= character.name %></p>
-                            <% if (character.rarity === 1) { %>
-                                <div class="bg-main-role-rare-blue py-1 px-3">
-                                    <p class="flex items-start text-2xl ">稀有</p>
-                                </div>
-                            <% } %>
-                            <% if (character.rarity === 2) { %>
-                                <div class="bg-main-role-epic-purple py-1 px-3">
-                                    <p class="flex items-start text-2xl">史詩</p>
-                                </div>
-                            <% } %>
-                            <% if (character.rarity === 3) { %>
-                                <div class="bg-main-role-legend-orange py-1 px-3">
-                                    <p class="flex items-start text-2xl">傳說</p>
-                                </div>
-                            <% } %>
-                        </div>
-                        <div class="flex justify-start bg-main-role-gray pr-20 sm:pr-5">
-                            <div class="text-2xl pl-44 py-3">
-                                <p class="py-1"><%= character.birth %></p>
-                                <p class="py-1 pb-10"><%= character.temp %></p>
-                                <p class="py-1 leading-loose"><%= character.intro %></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="">
-                        <% character.bonus.forEach((bo, k) => { %>
-                            <div class="flex justify-start pl-80 my-2">
-                                    <p class="pr-3 pt-2 ">◆ </p>
-                                    <p class="text-2xl py-1">
-                                        <%= bo %>
-                                    </p>
-                            </div>
-                        <% })%>
-                    </div>
-                </div>
-                <div class="absolute top-0 -left-16">
-                    <img style="height:500px" src="images/<%= character.img %>" alt="">
-                </div>
-            </div>
-            <% } %>
-        <% }) %>
-    <% } %>
-<% }) %> 
+<% characters.forEach((character, j) => { %> <% if (j % 2 === 0) { %>
+<div class="relative mb-40">
+  <div class="text-white font-light pt-16">
+    <div class="bg-main-light-blue-grey pr-36 pb-8 relative">
+      <div class="flex justify-start items-end pl-10 sm:pl-20 pr-8 py-5">
+        <p class="text-4xl sm:text-5xl text-main-role-name font-normal pr-8">
+          <%= character.name %>
+        </p>
+        <% if (character.rarity === 3) { %>
+        <div
+          class="bg-main-role-legend-orange py-1 px-3 absolute -top-12 lg:hidden"
+        >
+          <p class="flex items-start text-2xl">傳說</p>
+        </div>
+        <div class="bg-main-role-legend-orange py-1 px-3 hidden lg:block">
+          <p class="flex items-start text-xl lg:text-2xl">傳說</p>
+        </div>
+        <% } %>
+      </div>
+      <div class="flex justify-start bg-main-role-gray pr-48 lg:pr-44">
+        <div class="text-xl lg:text-2xl pl-10 sm:pl-20 py-3">
+          <p class="py-1"><%= character.birth %></p>
+          <p class="py-1 pb-10"><%= character.temp %></p>
+          <p class="py-1 leading-loose"><%= character.intro %></p>
+        </div>
+      </div>
+    </div>
+    <div class="pt-3 pl-10 md:pl-20">
+      <% character.bonus.forEach((bo, k) => { %>
+      <div class="flex justify-start my-2">
+        <p class="text-xl lg:text-2xl py-1"><%= bo %></p>
+      </div>
+      <% })%>
+    </div>
+  </div>
+  <div class="absolute top-0 -right-32">
+    <img style="height: 500px" src="images/<%= character.img %>" alt="" />
+  </div>
+</div>
+
+<% } else { %>
+<div class="relative mb-40">
+  <div class="text-white font-light pt-16">
+    <div class="bg-main-light-blue-grey pl-36 pb-8 relative">
+      <div class="flex justify-start items-end pl-44 pr-8 py-5">
+        <p class="text-4xl sm:text-5xl text-main-role-name font-normal pr-5">
+          <%= character.name %>
+        </p>
+        <% if (character.rarity === 3) { %>
+        <div
+          class="bg-main-role-legend-orange py-1 px-3 absolute -top-12 lg:hidden"
+        >
+          <p class="flex items-start text-2xl">傳說</p>
+        </div>
+        <div class="bg-main-role-legend-orange py-1 px-3 hidden lg:block">
+          <p class="flex items-start text-xl lg:text-2xl">傳說</p>
+        </div>
+        <% } %>
+      </div>
+      <div class="flex justify-start bg-main-role-gray pr-20">
+        <div class="text-xl lg:text-2xl pl-44 py-3">
+          <p class="py-1"><%= character.birth %></p>
+          <p class="py-1 pb-10"><%= character.temp %></p>
+          <p class="py-1 leading-loose"><%= character.intro %></p>
+        </div>
+      </div>
+    </div>
+    <div class="pl-72 md:pl-80">
+      <% character.bonus.forEach((bo, k) => { %>
+      <div class="flex justify-start my-2">
+        <p class="text-xl lg:text-2xl py-1"><%= bo %></p>
+      </div>
+      <% })%>
+    </div>
+  </div>
+  <div class="absolute top-0 -left-32">
+    <img style="height: 500px" src="images/<%= character.img %>" alt="" />
+  </div>
+</div>
+<% } %> <% }) %>
