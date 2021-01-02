@@ -1,1 +1,51 @@
-<h1>maps</h1>
+<div class="w-11/12 sm:w-4/5 md:w-2/3 lg:4/5 xl:max-w-screen-xl mx-auto">
+    <div class="hidden lg:block">
+        <div class="flex justify-around items-center mt-20 mb-36">
+            <% data.mapStars.forEach((s, i) => { %>
+                <div>
+                    <a href="maps.html/#<%= s.id %>">
+                        <div class="flex justify-center text-3xl text-main-light-blue-grey"><%= s.diff %></div>
+                        <div class="flex justify-center text-2xl text-main-light-blue-grey text-opacity-80"><%= s.star %></div>
+                    </a>
+                </div>
+                <% }) %>
+        </div>
+        <div>
+            <% data.mapStars.forEach((s, i) => { %>
+                <div class="mb-80">
+                    <div class="grid grid-cols-2 gap-4 lg:grid-cols-3 xl:max-w-screen-xl
+                    py-10 mx-auto relative border-t-4 border-b-4 border-main-light-blue-grey">
+                        <p class="text-5xl text-main-light-blue-grey absolute -top-16 mx-auto" id="<%= s.id %>"><%= s.star %></p>
+                        <% s.maps.forEach((map) => { %>
+                            <img src="images/<%= map.img %>" class="wow animate__bounceIn" style="visibility: visible; animation-name: bounceIn;" alt="oops!">
+                        <% }) %>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+    <div x-data="{ difficulty: 0 }" class="lg:hidden">
+        <div class="text-5xl text-main-light-blue-grey grid justify-items-center mt-20">難 度</div>
+        <div class="flex justify-around items-center mt-7">
+            <% data.mapStars.forEach((s, i) => { %>
+            <div @click="difficulty = <%= i %>" class="flex items-center justify-center w-8 h-8 text-main-light-blue-grey 
+                cursor-pointer text-5xl md:text-5xl mb-5 md:mb-5">
+                <span x-show="<%= i %> > difficulty">✰</span>
+                <span x-show="<%= i %> <= difficulty">★</span>
+            </div>
+            <% }) %> 
+        </div>
+
+        <div>
+            <% data.mapStars.forEach((s, i) => { %>
+                <div x-show="difficulty === <%= i %>" class="mb-40">
+                    <div class="grid grid-cols-2 gap-4 py-10 border-t-4 border-b-4 border-main-light-blue-grey">
+                        <% s.maps.forEach((map) => { %>
+                            <img class="w-96 h-auto wow animate__bounceIn" src="images/<%= map.img %>" alt="oops!">
+                        <% }) %>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+</div>
