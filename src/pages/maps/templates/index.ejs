@@ -5,7 +5,7 @@
                 <div>
                     <a href="maps.html/#<%= s.id %>">
                         <div class="flex justify-center text-3xl text-main-light-blue-grey"><%= s.diff %></div>
-                        <div class="flex justify-center text-2xl text-main-map-diff"><%= s.star %></div>
+                        <div class="flex justify-center text-2xl text-main-light-blue-grey text-opacity-80"><%= s.star %></div>
                     </a>
                 </div>
                 <% }) %>
@@ -39,7 +39,7 @@
         <div>
             <% data.mapStars.forEach((s, i) => { %>
                 <div x-show="difficulty === <%= i %>" class="mb-40">
-                    <div class="grid grid-cols-2 gap-4 sm:grid-cols-2 md:grid-cols-3 py-10 border-t-4 border-b-4 border-main-light-blue-grey">
+                    <div class="grid grid-cols-2 gap-4 py-10 border-t-4 border-b-4 border-main-light-blue-grey">
                         <% s.maps.forEach((map) => { %>
                             <img class="w-96 h-auto wow animate__bounceIn" src="images/<%= map.img %>" alt="oops!">
                         <% }) %>
