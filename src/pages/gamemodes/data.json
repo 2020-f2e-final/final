@@ -276,6 +276,53 @@
                 "intro":"進入比賽時玩家將獲得一定個數的導彈，使用導彈炸毀前方路障後即可通行，玩家在限定時間內到達終點，即可獲得勝利。",
                 "Img":"story10.png"
             }
+        ],
+        "rank":[
+            {
+                "typeName":"青銅車手",
+                "intro":"3個小段位",
+                "Img":"rank1.png"
+            },
+            {
+                "typeName":"白銀車手",
+                "intro":"3個小段位",
+                "Img":"rank2.png"
+            },
+            {
+                "typeName":"黃金車手",
+                "intro":"3個小段位",
+                "Img":"rank3.png"
+            },
+            {
+                "typeName":"鉑金車手",
+                "intro":"3個小段位",
+                "Img":"rank4.png"
+            },
+            {
+                "typeName":"鑽石車手",
+                "intro":"5個小段位",
+                "Img":"rank5.png"
+            },
+            {
+                "typeName":"大師車手",
+                "intro":"5個小段位",
+                "Img":"rank6.png"
+            },
+            {
+                "typeName":"王者車手",
+                "intro":"5個小段位",
+                "Img":"rank7.png"
+            },
+            {
+                "typeName":"傳奇車王",
+                "intro":"無小段位限制",
+                "Img":"rank8.png"
+            },
+            {
+                "typeName":"不朽車神",
+                "intro":"前100名獲得",
+                "Img":"rank9.png"
+            }
         ]
     }   
 }
