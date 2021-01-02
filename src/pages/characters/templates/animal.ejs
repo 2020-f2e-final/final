@@ -24,11 +24,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="pl-5 sm:pl-10 lg:pl-20 py-3 pr-2 sm:pr-48 md:pr-80 lg:pr-0">
+                <div class="pl-5 sm:pl-10 lg:pl-20 py-3 pr-2 sm:pr-48 md:pr-80 lg:pr-0 my-3">
                     <% character.bonus.forEach((bo, k) => { %>
-                        <div class="flex justify-start my-4">
-                            <p class="pr-3 pt-1 sm:pt-0 sm:text-xl lg:text-2xl">◆</p>
-                            <p class="leading-loose tracking-wide sm:text-xl lg:text-2xl"><%= bo %></p>
+                        <div class="flex justify-start my-1">
+                            <p class="leading-relaxed sm:leading-loose pr-3 pt-1 sm:pt-0 pb-1 sm:pb-0 text-sm sm:text-xl lg:text-2xl">◆</p>
+                            <p class="leading-relaxed sm:leading-loose sm:text-xl lg:text-2xl"><%= bo %></p>
                         </div>
                     <% })%>
                 </div>
@@ -52,7 +52,7 @@
                             <%= character.name %>
                         </p>
                         <% if (character.rarity === 3) { %>
-                            <div class="bg-main-role-legend-orange py-1 px-3 absolute top-3 hidden sm:block lg:hidden">
+                            <div class="bg-main-role-legend-orange py-1 px-3 absolute top-3 right-10 hidden sm:block lg:hidden">
                                 <p class="flex items-start sm:text-2xl">傳說</p>
                             </div>
                             <div class="bg-main-role-legend-orange py-1 px-3 sm:hidden lg:block">
@@ -71,8 +71,8 @@
                 <div class="pl-5 sm:pl-64 md:pl-80 my-3">
                     <% character.bonus.forEach((bo, k) => { %>
                         <div class="flex justify-start my-1 sm:y-2">
-                            <p class="pr-3 pt-1 sm:pt-0 sm:text-xl lg:text-2xl">◆</p>
-                            <p class="sm:text-xl lg:text-2xl"><%= bo %></p>
+                            <p class="leading-relaxed sm:leading-loose pr-3 pt-1 sm:pt-0 pb-1 sm:pb-0 text-sm sm:text-xl lg:text-2xl">◆</p>
+                            <p class="leading-relaxed sm:leading-loose sm:text-xl lg:text-2xl"><%= bo %></p>
                         </div>
                     <% })%>
                 </div>
