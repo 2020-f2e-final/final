@@ -47,6 +47,7 @@ module.exports = {
         'role-name':'#334666',//人物名字
         't-gray':'#6C7075', //寵物介紹
         'm-yellow':'#e9e9e9', //小標題米黃
+        'tool-bg-blue':'#5E78A4', //道具圖片的背景
       }
     },
     spacing: {
