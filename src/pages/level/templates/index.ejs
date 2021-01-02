@@ -2,11 +2,11 @@
     <br/>
     <br/>
     <div x-data="{ tab: 'level' }" >
-        <div class="grid grid-cols-10 gap-1">
-            <div class="col-start-1 relative left-2 font-medium cursor-pointer hover:text-main-levelTitle-light text-6xl" 
+        <div class="flex w-full">
+            <div class="relative w-1/2 font-medium cursor-pointer hover:text-main-levelTitle-light lg:text-6xl text-5xl" 
             :class="{'text-main-levelTitle-light': tab ==='level' ,'text-main-levelTitle-dark': tab !=='level', ' text-opacity-75': tab !=='level' }" 
                 @click="tab = 'level'">等級</div>
-            <div class="col-start-6 font-medium cursor-pointer hover:text-main-levelTitle-light text-6xl" 
+            <div class="w-1/2 font-medium cursor-pointer hover:text-main-levelTitle-light lg:text-6xl text-5xl" 
                 :class="{'text-main-levelTitle-light': tab ==='licence' ,'text-main-levelTitle-dark': tab !=='licence', ' text-opacity-75': tab !=='licence' ,}" 
                 @click="tab = 'licence'">駕照</div>
         </div>
