@@ -1,0 +1,97 @@
+<% characters.forEach((character, j) => { %>
+    <% if (j % 2 === 0) { %>
+        <div class="relative mb-20 sm:mb-40">
+            <div class="text-white font-light pt-16">
+                <div class="bg-main-light-blue-grey pr-5 sm:pr-36 pb-4 sm:pb-8">
+                    <div class="flex justify-start items-end pl-3 sm:pl-10 lg:pl-20 pr-8 py-2 sm:py-5">
+                        <p class="text-2xl sm:text-5xl text-main-role-name font-normal pr-5 sm:pr-8">
+                            <%= character.name %>
+                        </p>
+                        <% if (character.rarity === 3) { %>
+                            <div class="bg-main-role-legend-orange py-1 px-3 absolute top-5 lg:hidden">
+                                <p class="flex items-start sm:text-2xl">傳說</p>
+                            </div>
+                            <div class="bg-main-role-legend-orange py-1 px-3 hidden lg:block">
+                                <p class="flex items-start sm:text-2xl">傳說</p>
+                            </div>
+                        <% } %>
+                    </div>
+                    <div class="flex justify-start bg-main-role-gray pr-4 sm:pr-40 lg:pr-44">
+                        <div class="text-sm sm:text-xl lg:text-2xl pl-5 sm:pl-10 lg:pl-20 py-3">
+                            <p class="py-1"><%= character.birth %></p>
+                            <p class="py-1 pb-10"><%= character.temp %></p>
+                            <p class="py-1 leading-loose"><%= character.intro %></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="pl-5 sm:pl-10 lg:pl-20 pr-2 sm:pr-48 md:pr-80 lg:pr-0 my-2 sm:my-3">
+                    <% character.bonus.forEach((bo, k) => { %>
+                        <div class="flex justify-start my-1 sm:my-4">
+                            <p class="pr-3 pt-0 pb-1 sm:pb-0 text-xs sm:text-xl lg:text-2xl">◆</p>
+                            <p class="flex items-center text-sm sm:text-xl lg:text-2xl "><%= bo %></p>
+                        </div>
+                    <% })%>
+                </div>
+            </div>
+            <div class="absolute top-0 -right-32 hidden md:block">
+                <img data-wow-offset="200" class="wow animate__slideInRight" 
+                style="height: 500px" src="images/<%= character.img %>" alt="hey apple!" />
+            </div>
+            <div class="absolute top-16 -right-12 hidden sm:block md:hidden">
+                <img data-wow-offset="200" class="wow animate__slideInRight" 
+                style="height: 400px" src="images/<%= character.img %>" alt="hey orange!" />
+            </div>
+            <div class="absolute -top-1 -right-9 block sm:hidden">
+                <img data-wow-offset="200" class="w-56 wow animate__slideInRight" 
+                src="images/<%= character.img %>" alt="pasta!" />
+            </div>
+        </div>
+        <% } else { %>
+        <div class="relative mb-20 sm:mb-40">
+            <div class="text-white font-light pt-16">
+                <div class="bg-main-light-blue-grey pl-4 sm:pl-20 md:pl-36 pb-4 sm:pb-8">
+                    <div class="flex justify-end lg:justify-start items-end pl-2 sm:pl-44 pr-3 lg:pr-8 py-2 sm:py-5">
+                        <p class="text-2xl sm:text-5xl text-main-role-name font-normal sm:pr-8">
+                            <%= character.name %>
+                        </p>
+                        <% if (character.rarity === 3) { %>
+                            <div class="bg-main-role-legend-orange py-1 px-3 absolute top-5 right-3 sm:right-10 lg:hidden">
+                                <p class="flex items-start sm:text-2xl">傳說</p>
+                            </div>
+                            <div class="bg-main-role-legend-orange py-1 px-3 hidden lg:block">
+                                <p class="flex items-start sm:text-2xl">傳說</p>
+                            </div>
+                        <% } %>
+                    </div>
+                    <div class="flex justify-end sm:justify-start bg-main-role-gray pl-4 pr-4 lg:pr-20">
+                        <div class="text-sm sm:text-xl lg:text-2xl sm:pl-44 py-3">
+                            <p class="py-1 text-right sm:text-left"><%= character.birth %></p>
+                            <p class="py-1 pb-10 text-right sm:text-left"><%= character.temp %></p>
+                            <p class="py-1 leading-loose"><%= character.intro %></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="pl-9 sm:pl-64 md:pl-80 my-3 pr-5">
+                    <% character.bonus.forEach((bo, k) => { %>
+                        <div class="flex justify-start my-1 sm:my-4">
+                            <p class="pr-3 pt-0 pb-1 sm:pb-0 text-xs sm:text-xl lg:text-2xl">◆</p>
+                            <p class="flex items-center text-sm sm:text-xl lg:text-2xl "><%= bo %></p>
+                        </div>
+                    <% })%>
+                </div>
+            </div>
+            <div class="absolute top-0 -left-32 hidden md:block">
+                <img data-wow-offset="200" class="wow animate__slideInLeft" 
+                style="height: 500px" src="images/<%= character.img %>" alt="" />
+            </div>
+            <div class="absolute top-10 -left-24 hidden sm:block md:hidden">
+                <img data-wow-offset="200" class="wow animate__slideInLeft" 
+                style="height: 400px" src="images/<%= character.img %>" alt="" />
+            </div>
+            <div class="absolute top-0 -left-10 block sm:hidden">
+                <img data-wow-offset="200" class="w-56 wow animate__slideInLeft" 
+                src="images/<%= character.img %>" alt="" />
+            </div>
+        </div>
+    <% } %>
+<% }) %>

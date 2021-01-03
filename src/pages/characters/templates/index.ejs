@@ -1,1 +1,42 @@
-<h1>characters</h1>
+<div x-data="characters()" x-init="init" class="max-w-full overflow-hidden">
+    <div class="w-11/12 md:w-4/5 lg:w-4/5 xl:max-w-screen-lg mx-auto pt-20">
+        <div class="cursor-pointer mb-14 sm:mb-24 flex items-end space-x-4">
+            <div class="text-main-light-blue-grey mr-5 sm:mr-10 hover:text-opacity-100"
+            :class="{ 'text-opacity-25': tab !== 'base','sm:text-5xl': tab !== 'base','text-4xl': tab !== 'base'}">
+                <div :class="{ 'text-opacity-100': tab === 'base', 'sm:text-7xl': tab === 'base','text-5xl': tab === 'base'}" @click="tab = 'base'">
+                    基礎
+                </div>
+            </div>
+            <div class="text-main-light-blue-grey mr-10 hover:text-opacity-100" 
+            :class="{ 'text-opacity-25': tab !== 'animal','sm:text-5xl': tab !== 'animal','text-4xl': tab !== 'animal'}">
+                <div :class="{ 'text-opacity-100': tab === 'animal','sm:text-7xl': tab === 'animal','text-5xl': tab === 'animal'}" @click="tab = 'animal'">
+                    動物
+                </div>    
+            </div>
+        </div>
+
+        <% data.characterTypes.forEach((type, i) => { %>
+            <div x-show="tab === '<%= type.tab %>'">
+                <%- include(type.tab, { characters: type.characters }) %> 
+            </div>
+        <% }) %> 
+    </div>
+</div>
+<script>
+  function characters () {
+    return {
+      tab: 'base',
+      init () {
+        this.$watch('tab', () => this.resetWOW())
+      },
+      resetWOW () {
+        wow.init()
+        this.$nextTick(() => {
+          window.scrollTo(0, 1)
+          window.scrollTo(0, 0)
+        })
+      }
+    }
+  }
+</script>
+

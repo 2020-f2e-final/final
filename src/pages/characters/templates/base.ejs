@@ -1,0 +1,110 @@
+<% characters.forEach((character, j) => { %>
+    <% if (j % 2 === 0) { %>
+        <div class="relative mb-20 sm:mb-40">
+            <div class="text-white font-light pt-16">
+                <div class="bg-main-light-blue-grey pr-5 sm:pr-36 pb-4 sm:pb-8">
+                    <div class="flex justify-start items-end pl-5 sm:pl-10 lg:pl-20 pr-8 py-2 sm:py-5">
+                        <p class="text-2xl sm:text-5xl text-main-role-name font-normal pr-5 sm:pr-8">
+                            <%= character.name %>
+                        </p>
+                        <% if (character.rarity === 1) { %>
+                            <div class="bg-main-role-rare-blue  py-1 px-3 absolute top-5 lg:hidden">
+                                <p class="flex items-start sm:text-2xl">稀有</p>
+                            </div>
+                            <div class="bg-main-role-rare-blue py-1 px-3 hidden lg:block">
+                                <p class="flex items-start sm:text-2xl">稀有</p>
+                            </div>
+                        <% } %> <% if (character.rarity === 2) { %>
+                            <div class="bg-main-role-epic-purple py-1 px-3 absolute top-5 lg:hidden">
+                                <p class="flex items-start sm:text-2xl">史詩</p>
+                            </div>
+                            <div class="bg-main-role-epic-purple py-1 px-3 hidden lg:block">
+                                <p class="flex items-start sm:text-2xl">史詩</p>
+                            </div>
+                        <% } %>
+                    </div>
+                    <div class="flex justify-start bg-main-role-gray pr-4 sm:pr-28">
+                        <div class="text-sm sm:text-xl lg:text-2xl pl-5 sm:pl-10 lg:pl-20 py-3">
+                            <p class="py-1"><%= character.birth %></p>
+                            <p class="py-1 pb-10"><%= character.temp %></p>
+                            <p class="py-1 leading-loose"><%= character.intro %></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-start pl-5 sm:pl-10 lg:pl-20 py-3 pr-2 sm:pr-48 md:pr-56 lg:pr-0">
+                    <p class="leading-relaxed sm:leading-loose pr-3 pt-0 pb-1 sm:pb-0 text-xs sm:text-xl lg:text-2xl">
+                        ◆
+                    </p>
+                    <p class="flex items-center leading-relaxed sm:leading-loose text-sm sm:text-xl lg:text-2xl">
+                        <%= character.bonus %>
+                    </p>
+                </div>
+            </div>
+            <div class="absolute top-0 -right-16 hidden md:block">
+                <img data-wow-offset="200" class="wow animate__slideInRight" 
+                style="height: 500px" src="images/<%= character.img %>" alt="oops!" />
+            </div>
+            <div class="absolute top-5 -right-7 hidden sm:block md:hidden">
+                <img data-wow-offset="200" class="wow animate__slideInRight" 
+                style="height: 400px" src="images/<%= character.img %>" alt="oops!" />
+            </div>
+            <div class="absolute -top-10 -right-3 block sm:hidden">
+                <img data-wow-offset="200" class="w-48 wow animate__slideInRight" 
+                src="images/<%= character.img %>" alt="oops!" />
+            </div>
+        </div>
+    <% } else { %>
+        <div class="relative mb-20 sm:mb-40">
+            <div class="text-white font-light pt-16">
+                <div class="bg-main-light-blue-grey pl-4 sm:pl-20 md:pl-36 pb-4 sm:pb-8">
+                    <div class="flex justify-end lg:justify-start items-end pl-2 sm:pl-44 pr-3 lg:pr-8 py-2 sm:py-5">
+                        <p class="text-2xl sm:text-5xl text-main-role-name font-normal sm:pr-8">
+                            <%= character.name %>
+                        </p>
+                        <% if (character.rarity === 1) { %>
+                            <div class="bg-main-role-rare-blue py-1 px-3 absolute top-5 right-3 sm:right-10 lg:hidden">
+                                <p class="flex items-start sm:text-2xl">稀有</p>
+                            </div>
+                            <div class="bg-main-role-rare-blue py-1 px-3 hidden lg:block">
+                                <p class="flex items-start sm:text-2xl">稀有</p>
+                            </div>
+                        <% } %>
+                        <% if (character.rarity === 2) { %>
+                            <div class="bg-main-role-epic-purple py-1 px-3 absolute top-5 right-3 sm:right-10 lg:hidden">
+                                <p class="flex items-start sm:text-2xl">史詩</p>
+                            </div>
+                            <div class="bg-main-role-epic-purple py-1 px-3 hidden lg:block">
+                                <p class="flex items-start sm:text-2xl">史詩</p>
+                            </div>
+                        <% } %>
+                    </div>
+                    <div class="flex justify-end sm:justify-start bg-main-role-gray pl-4 pr-4 lg:pr-20" >
+                        <div class="text-sm sm:text-xl lg:text-2xl sm:pl-44 py-3">
+                            <p class="py-1 text-right sm:text-left"><%= character.birth %></p>
+                            <p class="py-1 pb-10 text-right sm:text-left"><%= character.temp %></p>
+                            <p class="py-1 leading-loose"><%= character.intro %></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-start pl-9 sm:pl-64 md:pl-80 my-3 pr-5">
+                    <p class="\leading-relaxed sm:leading-loose pr-3 pt-0 pb-1 sm:pb-0 text-xs sm:text-xl lg:text-2xl">◆</p>
+                    <p class="flex items-center leading-relaxed sm:leading-loose text-sm sm:text-xl lg:text-2xl">
+                        <%= character.bonus %>
+                    </p>
+                </div>
+            </div>
+            <div class="absolute top-0 -left-16 hidden md:block">
+                <img data-wow-offset="200" class="wow animate__slideInLeft" 
+                style="height: 500px" src="images/<%= character.img %>" alt="oops!" />
+            </div>
+            <div class="absolute top-5 -left-7 hidden sm:block md:hidden">
+                <img data-wow-offset="200" class="wow animate__slideInLeft" 
+                style="height: 400px" src="images/<%= character.img %>" alt="oops!" />
+            </div>
+            <div class="absolute -top-10 -left-5 block sm:hidden ">
+                <img data-wow-offset="200" class="w-48 wow animate__slideInLeft" 
+                src="images/<%= character.img %>" alt="oops!" />
+            </div>
+        </div>
+    <% } %>
+<% }) %>
