@@ -19,7 +19,7 @@
                             <%= s.star %>
                         </p>
                         <% s.maps.forEach((map) => { %>
-                            <img data-wow-offset="250" src="images/<%= map.img %>" 
+                            <img data-wow-offset="150" src="images/<%= map.img %>" 
                             class="wow animate__bounceIn" alt="ig: xu_wei_o">
                         <% }) %>
                     </div>
@@ -44,7 +44,7 @@
                 <div x-show="difficulty === <%= i %>" class="mb-40">
                     <div class="grid grid-cols-2 gap-4 py-10 border-t-4 border-b-4 border-main-light-blue-grey">
                         <% s.maps.forEach((map) => { %>
-                            <img data-wow-offset="250" class="w-96 h-auto wow animate__bounceIn" 
+                            <img class="w-96 h-auto wow animate__bounceIn" 
                             src="images/<%= map.img %>" alt="oops!">
                         <% }) %>
                     </div>
