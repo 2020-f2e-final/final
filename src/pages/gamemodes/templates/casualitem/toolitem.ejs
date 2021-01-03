@@ -1,9 +1,9 @@
 <div class="hidden pb-12 sm:grid xl:grid-cols-2">
     <% data.mode.casual.toolitem.forEach((tool) => { %>
         <div class="pt-10 pl-20 flex justify-around">
-            <div class="h-40 w-96 rounded-r-lg bg-main-light-blue-grey relative">
+            <div data-wow-delay="0.5s" class="wow animate__zoomInDown h-40 w-96 rounded-r-lg bg-main-light-blue-grey relative">
                 <div class="rounded-full h-40 w-40 bg-main-tool-bg-blue border-4 border-solid border-main-faded-blue absolute -left-20 shadow-lg grid justify-items-stretch">
-                    <div class="h-32 w-32 flex justify-self-center self-center"><img src="images/<%= tool.toolImg %>" alt=""></div>
+                    <div data-wow-delay="1s" class="animate-bounce h-32 w-32 flex justify-self-center self-center"><img src="images/<%= tool.toolImg %>" alt=""></div>
                 </div>
                 <p class="text-main-title-blue text-3xl font-bold text-center py-2"><%= tool.name %></p>
                 <p class="text-white text-1xl text-center bg-main-t-gray px-4 py-2 pl-20 h-24"><%= tool.intro %></p>
@@ -14,9 +14,9 @@
 <div class="pb-12 grid sm:hidden">
     <% data.mode.casual.toolitem.forEach((tool) => { %>
         <div class="pt-16 flex justify-around">
-            <div class="w-1/2 rounded-lg bg-main-light-blue-grey grid place-items-center relative">
+            <div class="wow animate__fadeInUp w-1/2 rounded-lg bg-main-light-blue-grey grid place-items-center relative">
                 <div class="rounded-full h-24 w-24 bg-main-tool-bg-blue border-4 border-solid border-main-faded-blue shadow-lg grid justify-items-stretch absolute -top-14">
-                    <div class="h-14 w-14 flex justify-self-center self-center"><img src="images/<%= tool.toolImg %>" alt=""></div>
+                    <div data-wow-delay="1s" class="animate-bounce h-14 w-14 flex justify-self-center self-center"><img src="images/<%= tool.toolImg %>" alt=""></div>
                 </div>
                 <p class="pt-12 text-main-title-blue text-2xl font-bold text-center justify-self-center"><%= tool.name %></p>
                 
