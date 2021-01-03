@@ -1,7 +1,7 @@
 <div class="pb-10 pt-12">
     <div class="bg-main-light-blue-grey">
         <div class="flex flex-wrap justify-evenly">
-            <div class="text-3xl text-main-title-blue p-8">在故事模式中，完成任務目標後將獲得豐富的經驗和酷幣獎勵，此外在BOSS關卡完成5星任務即可獲得限時海盜船長車手，每章星星累計到一定數量還有限時服飾套裝等著你哦，一旦領取將不能重複獲得，但是再次挑戰成功後仍可獲得少量經驗哦。</div>
+            <div class="wow animate__zoomIn text-3xl text-main-title-blue p-8">在故事模式中，完成任務目標後將獲得豐富的經驗和酷幣獎勵，此外在BOSS關卡完成5星任務即可獲得限時海盜船長車手，每章星星累計到一定數量還有限時服飾套裝等著你哦，一旦領取將不能重複獲得，但是再次挑戰成功後仍可獲得少量經驗哦。</div>
         </div>
     </div>
     <div class="pt-12">
@@ -10,11 +10,11 @@
         </div>
         <div class="bg-main-light-blue-grey">
             <div class="flex flex-wrap justify-evenly">
-                <div class="text-3xl text-main-title-blue p-8">故事模式除了常規的競速賽、道具賽和無限加速外，還包含限時賽、淘汰賽、追擊賽、逃脫賽、時間挑戰賽、收集賽、鑽門模式、清障模式等特有玩法。</div>
+                <div class="wow animate__zoomIn text-3xl text-main-title-blue p-8">故事模式除了常規的競速賽、道具賽和無限加速外，還包含限時賽、淘汰賽、追擊賽、逃脫賽、時間挑戰賽、收集賽、鑽門模式、清障模式等特有玩法。</div>
             </div>
             <div class="grid grid-cols-2 gap-4 pt-8 pb-8 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-5  justify-items-center">
                 <% data.mode.story.forEach((s)=> { %>
-                    <a href="gamemodes.html/#<%= s.id %>"><div class="text-2xl text-main-t-gray p-2">● <%= s.typeName %></div></a>
+                    <a href="gamemodes.html/#<%= s.id %>"><div data-wow-delay="0.5s" class="wow animate__flipInX text-2xl text-main-t-gray p-2">● <%= s.typeName %></div></a>
                 <% }) %>
                 
             </div>
@@ -28,7 +28,7 @@
     </div>
     <% data.mode.story.forEach((s)=> { %>
         <div class="mb-8 bg-main-light-blue-grey relative">
-            <div class="text-main-title-blue text-6xl pt-8 pl-24" id="<%= s.id %>">
+            <div class="wow animate__rotateInDownLeft text-main-title-blue text-6xl pt-8 pl-24" id="<%= s.id %>">
                 <b><i><%= s.typeName %></i></b>
             </div>
             <div class="w-4/5 mx-auto">
@@ -37,9 +37,9 @@
         
             <div class="flex flex-wrap justify-center">
 
-                <div class="mx-auto p-8"><img src="images/<%= s.Img %> " alt="" /></div>
+                <div data-wow-delay="0.5s" class="wow animate__rubberBand mx-auto p-8"><img src="images/<%= s.Img %> " alt="" /></div>
                 
-                <div class="text-main-title-blue text-3xl w-2/3 lg:w-1/2 xl:w-1/2 mx-auto pb-10 pt-8 justify-items-center">
+                <div data-wow-delay="1s" class="wow animate__zoomIn text-main-title-blue text-3xl w-2/3 lg:w-1/2 xl:w-1/2 mx-auto pb-10 pt-8 justify-items-center">
                     <%= s.intro %>
                 </div>
             </div>

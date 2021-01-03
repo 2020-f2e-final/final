@@ -1,7 +1,7 @@
 <div class="py-12">
     <div class="bg-main-light-blue-grey">
         <div class="flex flex-wrap justify-evenly">
-            <div class="text-3xl text-main-title-blue p-8">參加排位賽來獲取積分，每個賽季結束時根據積分與段位來頒發對應的獎勵</div>
+            <div class="wow animate__zoomIn text-3xl text-main-title-blue p-8">參加排位賽來獲取積分，每個賽季結束時根據積分與段位來頒發對應的獎勵</div>
         </div>
     </div>
     <div class="pt-12">
@@ -10,29 +10,29 @@
         </div>
         <div class="bg-main-light-blue-grey">
             <div class="flex flex-wrap justify-evenly">
-                <div class="text-3xl text-main-title-blue p-8">根據每場的結果獲得段位積分。</div>
+                <div class="wow animate__zoomIn text-3xl text-main-title-blue p-8">根據每場的結果獲得段位積分。</div>
             </div>
             <div class="pb-12 flex justify-center">
                 <div class="w-4/5">
                     
-                    <div class="pt-8 pl-8 text-4xl  text-main-title-blue font-bold">單人競速</div>
+                    <div class="wow animate__rollIn pt-8 pl-8 text-4xl  text-main-title-blue font-bold">單人競速</div>
                     <div class="bg-main-faded-blue justify-center">
                         <div class="flex flex-wrap justify-evenly">
-                            <div class="text-2xl lg:text-3xl text-main-title-blue p-8">得分來自於名次、衝線、獨估鰲頭、連續第一次數；最後四名會扣分</div>
+                            <div data-wow-delay="0.5s" class="wow animate__zoomIn text-2xl lg:text-3xl text-main-title-blue p-8">得分來自於名次、衝線、獨估鰲頭、連續第一次數；最後四名會扣分</div>
                         </div>
                     </div>
     
-                    <div class="pt-8 pl-8 text-4xl  text-main-title-blue font-bold">組隊競速</div>
+                    <div class="wow animate__rollIn pt-8 pl-8 text-4xl  text-main-title-blue font-bold">組隊競速</div>
                     <div class="bg-main-faded-blue justify-center">
                         <div class="flex flex-wrap justify-evenly">
-                            <div class="text-2xl lg:text-3xl text-main-title-blue p-8">得分來自於隊伍勝利、名次、衝線、獨估鰲頭、連續第一次數、好友合作勝利，隊伍失敗會扣分</div>
+                            <div data-wow-delay="0.5s" class="wow animate__zoomIn text-2xl lg:text-3xl text-main-title-blue p-8">得分來自於隊伍勝利、名次、衝線、獨估鰲頭、連續第一次數、好友合作勝利，隊伍失敗會扣分</div>
                         </div>
                     </div>
     
-                    <div class="pt-8 pl-8 text-4xl  text-main-title-blue font-bold">組隊道具</div>
+                    <div class="wow animate__rollIn pt-8 pl-8 text-4xl  text-main-title-blue font-bold">組隊道具</div>
                     <div class="bg-main-faded-blue justify-center">
                         <div class="flex flex-wrap justify-evenly">
-                            <div class="text-2xl lg:text-3xl text-main-title-blue p-8">得分來自於隊伍勝利、最棒隊友、逆風翻盤、默契團隊、好友合作勝利，隊伍失敗會扣分(連續第一得分僅在第3次、第5次獲得;第5次以後每5次可獲得該分數)</div>
+                            <div data-wow-delay="0.5s" class="wow animate__zoomIn text-2xl lg:text-3xl text-main-title-blue p-8">得分來自於隊伍勝利、最棒隊友、逆風翻盤、默契團隊、好友合作勝利，隊伍失敗會扣分(連續第一得分僅在第3次、第5次獲得;第5次以後每5次可獲得該分數)</div>
                         </div>
                     </div>
 
@@ -60,9 +60,9 @@
                     <div class="w-4/5 mx-auto">
                         <% data.mode.rank.forEach((rank) => { %>
                             <div class="bg-main-faded-blue py-8 grid justify-center">
-                                <div class="bg-main-light-blue-grey p-4" style="box-shadow: 2px 2px 0px rgba(0, 0, 0)"><img src="images/<%= rank.Img %> " alt="">
+                                <div class="bg-main-light-blue-grey p-4" style="box-shadow: 2px 2px 0px rgba(0, 0, 0)"><img class="wow animate__tada" src="images/<%= rank.Img %> " alt="">
                                     <div class="bg-main-m-yellow" style="box-shadow: 2px 2px 0px rgba(0, 0, 0)">
-                                        <p class="text-3xl text-center text-main-title-blue font-semibold"><%= rank.typeName %> </p>
+                                        <p class="wow animate__heartBeat text-3xl text-center text-main-title-blue font-semibold"><%= rank.typeName %> </p>
                                         <p class="text-3xl text-center text-main-title-blue font-semibold"><%= rank.intro %> </p>
                                     </div>
                                 </div>    
@@ -75,24 +75,24 @@
             <div class="pb-12 flex justify-center">
                 <div class="w-4/5">
                     
-                    <div class="pt-8 pl-8 text-4xl  text-main-title-blue font-bold">升星</div>
+                    <div class="wow animate__rollIn pt-8 pl-8 text-4xl  text-main-title-blue font-bold">升星</div>
                     <div class="bg-main-faded-blue justify-center">
                         <div class="flex flex-wrap justify-evenly">
-                            <div class="text-2xl lg:text-3xl text-main-title-blue p-8">積分增加，進度條會增長;當進度條長滿時，會增加星級。</div>
+                            <div data-wow-delay="0.5s" class="wow animate__zoomIn text-2xl lg:text-3xl text-main-title-blue p-8">積分增加，進度條會增長;當進度條長滿時，會增加星級。</div>
                         </div>
                     </div>
     
-                    <div class="pt-8 pl-8 text-4xl  text-main-title-blue font-bold">晉段</div>
+                    <div class="wow animate__rollIn pt-8 pl-8 text-4xl  text-main-title-blue font-bold">晉段</div>
                     <div class="bg-main-faded-blue justify-center">
                         <div class="flex flex-wrap justify-evenly">
-                            <div class="text-2xl lg:text-3xl text-main-title-blue p-8">當星級已滿時，繼續增加積分將提升段位等級。</div>
+                            <div data-wow-delay="0.5s" class="wow animate__zoomIn text-2xl lg:text-3xl text-main-title-blue p-8">當星級已滿時，繼續增加積分將提升段位等級。</div>
                         </div>
                     </div>
     
-                    <div class="pt-8 pl-8 text-4xl  text-main-title-blue font-bold">降段</div>
+                    <div class="wow animate__rollIn pt-8 pl-8 text-4xl  text-main-title-blue font-bold">降段</div>
                     <div class="bg-main-faded-blue justify-center">
                         <div class="flex flex-wrap justify-evenly">
-                            <div class="text-2xl lg:text-3xl text-main-title-blue p-8">當積分低於相應值後，降低星級;當星級為1時，繼續扣除積分將觸發段位保護或降低段位等級。</div>
+                            <div data-wow-delay="0.5s" class="wow animate__zoomIn text-2xl lg:text-3xl text-main-title-blue p-8">當積分低於相應值後，降低星級;當星級為1時，繼續扣除積分將觸發段位保護或降低段位等級。</div>
                         </div>
                     </div>
 
@@ -108,13 +108,13 @@
         <div class="bg-main-light-blue-grey flex justify-center">
             <div class="w-4/5">
                 <div class="flex flex-wrap justify-evenly">
-                    <div class="text-2xl lg:text-3xl text-main-title-blue p-8">◆開啟條件:比賽中全員平均段位達到鉑金及以上段位，則將開啟賽道禁用</div>
+                    <div class="wow animate__zoomIn text-2xl lg:text-3xl text-main-title-blue p-8">◆開啟條件:比賽中全員平均段位達到鉑金及以上段位，則將開啟賽道禁用</div>
                 </div>
                 <div class="flex flex-wrap justify-evenly">
-                    <div class="text-2xl lg:text-3xl text-main-title-blue p-8">◆基本規則:每人可在10條賽道中任選1條進行禁用(新圖、精選圖與其他隨機不可選擇)</div>
+                    <div data-wow-delay="0.5s" class="wow animate__zoomIn text-2xl lg:text-3xl text-main-title-blue p-8">◆基本規則:每人可在10條賽道中任選1條進行禁用(新圖、精選圖與其他隨機不可選擇)</div>
                 </div> 
                 <div class="flex flex-wrap justify-evenly">
-                    <div class="text-2xl lg:text-3xl text-main-title-blue p-8">◆新圖得分:禁用結束後，將在最終剩餘的賽道中隨機出一條進行比賽;若隨機出到新圖，則結算時可額外獲得新圖得分+1</div>
+                    <div data-wow-delay="1s" class="wow animate__zoomIn text-2xl lg:text-3xl text-main-title-blue p-8">◆新圖得分:禁用結束後，將在最終剩餘的賽道中隨機出一條進行比賽;若隨機出到新圖，則結算時可額外獲得新圖得分+1</div>
                 </div>    
             </div>
         </div>
