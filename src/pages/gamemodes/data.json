@@ -86,14 +86,14 @@
                 "ability1":"35%機率防禦超級導彈攻擊",
                 "ability2":"20%機率防禦普通導彈攻擊",
                 "class":"1",
-                "toolImg":"pet1.png"
+                "petImg":"pet1.png"
             },
             {
                 "name":"黑白鈴鐺貓",
                 "intro":"黑白鈴鐺貓的鈴鐺不會響。",
                 "ability1":"36%機率免疫水炸彈的攻擊",
                 "class":"0",
-                "toolImg":"pet2.png"
+                "petImg":"pet2.png"
             },
             {
                 "name":"蟹蟹妮",
@@ -101,7 +101,7 @@
                 "ability1":"25%機率免疫水炸彈",
                 "ability2":"40%機率迅速脫離水蒼蠅和水炸彈",
                 "class":"1",
-                "toolImg":"pet3.png"
+                "petImg":"pet3.png"
             },
             {
                 "name":"小獅王",
@@ -109,7 +109,7 @@
                 "ability1":"28%機率免疫閃電的攻擊",
                 "ability2":"使用道具時，25%氮氣持續時間+10%",
                 "class":"0",
-                "toolImg":"pet4.png"
+                "petImg":"pet4.png"
             },
             {
                 "name":"瑤臺仙子",
@@ -118,14 +118,14 @@
                 "ability2":"18%機率免疫大魔王的攻擊",
                 "ability3":"45%機率迅速脫離水蒼蠅和水炸彈",
                 "class":"2",
-                "toolImg":"pet5.png"
+                "petImg":"pet5.png"
             },
             {
                 "name":"小哈士奇",
                 "intro":"這隻哈士奇買了一副社會眼鏡，其實它未成年。",
                 "ability1":"25%機率免疫普通導彈的攻擊",
                 "class":"0",
-                "toolImg":"pet6.png"
+                "petImg":"pet6.png"
             },
             {
                 "name":"水藍章魚寵物",
@@ -133,14 +133,14 @@
                 "ability1":"35%機率防禦普通導彈攻擊",
                 "ability2":"35%機率防禦雲霧",
                 "class":"1",
-                "toolImg":"pet7.png"
+                "petImg":"pet7.png"
             },
             {
                 "name":"藍色水汪汪飛彈",
                 "intro":"深邃的天空色搭配耀眼的霹靂圖騰，張揚的藍色水汪汪飛彈是賽場上的晴空閃電。",
                 "ability1":"直線行駛時氮氣動力+1",
                 "class":"0",
-                "toolImg":"pet8.png"
+                "petImg":"pet8.png"
             }
         ],    
         "casualintro":[
