@@ -1,6 +1,7 @@
 {
     "levelTypes":[
         {
+            "id":"one",
             "typeName":"手套",
             "level":[
                 {
@@ -42,6 +43,7 @@
             ]
         },
         {
+            "id":"two",
             "typeName":"星手套",
             "level":[
                 {
@@ -83,6 +85,7 @@
             ]
         },
         {
+            "id":"three",
             "typeName":"星星",
             "level":[
                 {
