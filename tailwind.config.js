@@ -41,8 +41,8 @@ module.exports = {
         'orange-yellow':'#fca000', //傳說級
         'rare-blue':'#4b9ff7', //稀有&進階
         'role-rare-blue':'#7fa7dB', //人物稀有
-        'role-epic-purple':'#9E7FDB', //人物史詩
-        'role-legend-orange':'#E4C081', //人物傳說
+        'role-epic-purple':'#bf54cb', //人物史詩
+        'role-legend-orange':'#fca000', //人物傳說
         'role-gray':'#575757', //人物介紹-灰色
         'role-name':'#334666',//人物名字
       }
