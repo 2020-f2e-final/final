@@ -5,47 +5,47 @@
             "tecName":"左轉 右轉"
         },
         {
-            "tecId":"two",
+            "tecId":"three",
             "tecName":"煞車 小噴"
         },
         {
-            "tecId":"three",
+            "tecId":"five",
             "tecName":"飄移"
         },
         {
-            "tecId":"four",
+            "tecId":"six",
             "tecName":"搖頭衝刺"
         },
         {
-            "tecId":"five",
+            "tecId":"seven",
             "tecName":"點飄"
         },
         {
-            "tecId":"six",
+            "tecId":"eight",
             "tecName":"拖飄"
         },
         {
-            "tecId":"seven",
+            "tecId":"nine",
             "tecName":"雙甩"
         },
         {
-            "tecId":"eight",
+            "tecId":"ten",
             "tecName":"拖飄延續"
         },
         {
-            "tecId":"nine",
+            "tecId":"eleven",
             "tecName":"最佳化飄移"
         },
         {
-            "tecId":"ten",
+            "tecId":"twelve",
             "tecName":"反向集氣"
         },
         {
-            "tecId":"eleven",
+            "tecId":"thirteen",
             "tecName":"點拖集氣"
         },
         {
-            "tecId":"twelve",
+            "tecId":"fourteen",
             "tecName":"斷飄補氣"
         }
     ],
@@ -60,21 +60,21 @@
             "tecGif":"左轉.gif"
         },
         {
-            "tecId":"one",
+            "tecId":"two",
             "tecTitle":"右轉",
             "tecLevel":"基礎",
             "tecText":"按右轉鍵即可右轉",
             "tecGif":"右轉.gif"
         },
         {
-            "tecId":"two",
+            "tecId":"three",
             "tecTitle":"煞車",
             "tecLevel":"基礎",
             "tecText":"按煞車鍵即可煞車或倒退",
             "tecGif":"煞車.gif"
         },
         {
-            "tecId":"two",
+            "tecId":"four",
             "tecTitle":"小噴",
             "tecLevel":"基礎",
             "tecText":"飄移一次可成功觸發一次小噴",
@@ -83,70 +83,70 @@
     ],
     "tecConsTypes":[
         {
-            "tecId":"three",
+            "tecId":"five",
             "tecTitle":"飄移",
             "tecLevel":"基礎",
             "tecText":"飄移是適用於各種彎道的基礎飄移技巧，在快速過彎的同時觸發一次小噴",
             "tecGif":"飄移.gif"
         },
         {
-            "tecId":"four",
+            "tecId":"six",
             "tecTitle":"搖頭衝刺",
             "tecLevel":"基礎",
             "tecText":"直道行駛時，連續快速點擊螢幕空白位置，可以在無氮氣下觸發衝刺效果",
             "tecGif":"搖頭衝刺.gif"
         },
         {
-            "tecId":"five",
+            "tecId":"seven",
             "tecTitle":"點飄",
             "tecLevel":"進階",
             "tecText":"點飄是進入飄移狀態後又快速脫離的技巧，用作小幅度調整車頭或少量補氣",
             "tecGif":"點飄.gif"
         },
         {
-            "tecId":"six",
+            "tecId":"eight",
             "tecTitle":"拖飄",
             "tecLevel":"基礎",
             "tecText":"拖飄是釋放氮氣時可使用的飄移技巧，在快速過彎的同時大幅度提高集氣效率",
             "tecGif":"拖飄.gif"
         },
         {
-            "tecId":"seven",
+            "tecId":"nine",
             "tecTitle":"雙甩",
             "tecLevel":"進階",
             "tecText":"雙甩是快速通過U型彎的技巧，在減少速度折損的同時還可收集一定氮氣",
             "tecGif":"雙甩.gif"
         },
         {
-            "tecId":"eight",
+            "tecId":"ten",
             "tecTitle":"拖飄延續",
             "tecLevel":"高級",
             "tecText":"拖飄延續是指在一定時間內保持拖飄狀態，有持續集氣的效果，適用於大弧彎",
             "tecGif":"拖飄延續.gif"
         },
         {
-            "tecId":"nine",
+            "tecId":"eleven",
             "tecTitle":"最佳化飄移",
             "tecLevel":"高級",
             "tecText":"最佳化飄移是適用於各種彎道的高端飄移技巧，能以最小的速度折損快速過彎且完成集氣",
             "tecGif":"最佳化飄移.gif"
         },
         {
-            "tecId":"ten",
+            "tecId":"twelve",
             "tecTitle":"反向集氣",
             "tecLevel":"進階",
             "tecText":"反向集氣是適用於寬直道和大彎道的重要集氣技巧，可在氮氣狀態下瞬間獲得大量集氣",
             "tecGif":"反向集氣.gif"
         },
         {
-            "tecId":"eleven",
+            "tecId":"thirteen",
             "tecTitle":"點拖集氣",
             "tecLevel":"進階",
             "tecText":"點拖集氣是指點飄後立馬銜接拖飄，可在保持高速過彎的同時提高集氣效率",
             "tecGif":"點拖集氣.gif"
         },
         {
-            "tecId":"twelve",
+            "tecId":"fourteen",
             "tecTitle":"斷飄補氣",
             "tecLevel":"高級",
             "tecText":"斷飄補氣是拖飄過程中遇到集氣槽滿時，及時斷飄以補充為氮氣",
