@@ -1,4 +1,6 @@
-<div x-data="{ ttab: 'aa' }">
+<p class="xl:hidden mx-auto text-5xl md:rounded-lg lg:text-6xl rounded-lg font-medium lg:font-bold tracking-wider cursor-pointer bg-main-light-blue-grey text-main-black-blue p-4 flex justify-center">道具模式</p>
+
+<div x-data="{ ttab: 'aa' }" class="pt-12">
     <div class="hidden md:flex justify-between">
         <div :class="{ 'text-opacity-100': ttab === 'aa' }" class="cursor-pointer hover:text-white text-main-light-blue-grey md:text-4xl lg:text-5xl xl:text-7xl font-medium lg:font-bold tracking-wider text-opacity-30" @click="ttab = 'aa'">道具賽</div>
         <div :class="{ 'text-opacity-100': ttab === 'bb' }" class="cursor-pointer hover:text-white text-main-light-blue-grey md:text-4xl lg:text-5xl xl:text-7xl font-medium lg:font-bold tracking-wider text-opacity-30" @click="ttab = 'bb'">寵物</div>
