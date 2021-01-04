@@ -4,7 +4,7 @@
         </div>
         <div class="flex w-1/2">
             <% data.licenceTypes.forEach((type) =>{%>
-                <div class="w-1/6 text-2xl text-white cursor-pointer hover:text-main-levelTitle-dark"><a href="level.html/#<%= type.typeId %>"><%= type.typeName %></a></div>
+                <div class="sm:w-1/6 w-1/4 lg:text-3xl md:text-2xl text-xl text-white cursor-pointer hover:text-main-levelTitle-dark"><a href="level.html/#<%= type.typeId %>"><%= type.typeName %></a></div>
                 <% }) %> 
         </div>
     </div>
@@ -12,23 +12,24 @@
     <% data.licenceTypes.forEach((type, i) => { %>
         <div id="<%= type.typeId %>">
             <div class="mt-14">
-                <div class="mb-7 relative left-2 text-5xl text-white sm:underline"><%= type.typename %></div>
+                <div class="mb-7 relative left-2 lg:text-5xl sm:text-4xl text-3xl text-white underline"><%= type.typename %></div>
             </div>
             <div class="flex flex-wrap justify-center">
-                    <div class="w-full relative py-12 pl-80 mb-6">
-                        <div class="relative rounded-3xl bg-main-faded-blue h-48">
-                            <div class="flex flex-wrap w-full pl-48">
+                    <div class="flex w-11/12 relative xl:py-10 lg:py-14 md:py-8 sm:py-5 py-2 mb-6 xl:h-72 lg:h-60 md:h-40 sm:h-32 h-16">
+                        <div class="lg:w-1/4 w-1/5"></div>
+                        <div class="relative lg:w-3/4 w-4/5 sm:rounded-3xl rounded-xl bg-main-faded-blue py-6">
+                            <div class="flex flex-wrap lg:w-2/3 md:w-3/5 absolute right-0">
                                 <% type.mission.forEach((mission, i) => { %>
-                                    <div class="flex w-1/2 mt-2 mb-6 ">
+                                    <div class="flex w-1/2 xl:my-2 lg:my-1">
                                         <div class="rounded-full h-3 w-3 my-auto mx-2 bg-white">
                                         </div>
-                                        <div class="text-white text-3xl"><a href="level.html/#<%= mission.id %>"><%= mission.title %></a></div>
+                                        <div class="text-white lg:text-3xl md:text-2xl text-xl"><a href="level.html/#<%= mission.id %>"><%= mission.title %></a></div>
                                     </div>
                                 <% }) %>
                             </div>
                         </div>
-                        <div class="my-auto absolute top-0 left-0 w-1/2 pr-10">
-                            <img class="" src="images/<%= type.typeImg %> " alt="">
+                        <div class="absolute left-0 top-0 w-1/2">
+                            <img class="xl:h-80 lg::h-72 w-full" src="images/<%= type.typeImg %> " alt="">
                         </div>
                     </div>
                     <% type.mission.forEach((mission, i) => { %>
