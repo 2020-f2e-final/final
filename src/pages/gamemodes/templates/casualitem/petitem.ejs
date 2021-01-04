@@ -1,0 +1,75 @@
+<div class="py-12 grid">
+    <% data.mode.petitem.forEach((pet, i) => { %>
+        <% if (i % 2 === 0) { %>
+            <div class="relative pb-32 py-20" id="<%= pet.id %>">
+                <div class="flex w-4/5 absolute left-0 top-6">
+                    <div>
+                        <% if (pet.class === "0") { %>
+                            <span class="absolute left-0 mr-2 px-4 py-1 font-light text-xl text-white tracking-widest bg-main-rare-blue">稀有</span>
+                        <% } else if (pet.class === "1") { %>
+                            <span class="absolute left-0 mr-2 px-4 py-1 font-light text-xl text-white tracking-widest bg-main-pinky-purple">史詩</span>
+                        <% } else { %>
+                            <span class="absolute left-0 mr-2 px-4 py-1 font-light text-xl text-white tracking-widest bg-main-orange-yellow">傳說</span>
+                        <% } %> 
+                    </div>
+                    
+                    <div class="ml-24 bg-main-light-blue-grey h-0.5 text-main-light-blue-grey text-base md:text-2xl xl:text-3xl flex-wrap">
+                        <%= pet.intro %>
+                    </div>
+                </div>
+                <div class="wow animate__fadeInTopRight absolute right-0 top-24 md:top-auto w-32 sm:w-48 lg:w-60 xl:w-72"><img src="images/<%= pet.petImg %> " alt=""></div>
+                <div class="bg-main-gray-blue mt-36 h-72 grid justify-center content-center">
+                    <div class="wow animate__flipInY absolute left-0 bottom-28 lg:top-44 text-white font-bold text-4xl sm:text-6xl xl:text-8xl"><%= pet.name %> </div>
+                    <div data-wow-delay="0.5s" class="wow animate__flipInX p-8 text-lg md:text-2xl xl:text-3xl text-center text-white">
+                        <% if (pet.ability1) { %>
+                            <p><%= pet.ability1 %></p>
+                        <% } %>
+                        <% if (pet.ability2) { %>
+                            <p><%= pet.ability2 %></p>
+                        <% } %>
+                        <% if (pet.ability3) { %>
+                            <p><%= pet.ability3 %></p>                         
+                        <% } %>                     
+                    </div>
+                </div>
+            </div>
+
+        <% } else { %>
+            
+            <div class="relative py-20" id="<%= pet.id %>">
+                <div class="flex justify-end w-4/5 absolute right-0 top-6">
+                    <div class="mr-24 bg-main-light-blue-grey h-0.5 text-main-light-blue-grey text-base md:text-2xl xl:text-3xl">
+                        <%= pet.intro %> 
+                    </div>
+                    <div>
+                        <% if (pet.class === "0") { %>
+                            <span class="absolute right-0 mr-2 px-4 py-1 font-light text-xl text-white tracking-widest bg-main-rare-blue">稀有</span>
+                        <% } else if (pet.class === "1") { %>
+                            <span class="absolute right-0 mr-2 px-4 py-1 font-light text-xl text-white tracking-widest bg-main-pinky-purple">史詩</span>
+                        <% } else { %>
+                            <span class="absolute right-0 mr-2 px-4 py-1 font-light text-xl text-white tracking-widest bg-main-orange-yellow">傳說</span>
+                        <% } %> 
+                    </div>
+                        
+                </div>
+                <div class="wow animate__fadeInTopLeft absolute left-0 top-24 md:top-auto w-32 sm:w-48 lg:w-60 xl:w-72"><img src="images/<%= pet.petImg %> " alt=""></div>
+                <div class="bg-main-gray-blue mt-36 h-72 grid justify-center content-center">
+                    <div class="wow animate__flipInY absolute right-0 bottom-16 lg:top-44 text-white font-bold text-4xl sm:text-6xl xl:text-8xl"><%= pet.name %> </div>
+                    <div data-wow-delay="0.5s" class="wow animate__flipInX  p-8 text-lg md:text-2xl xl:text-3xl text-center text-white">
+                        <% if (pet.ability1) { %>
+                            <p><%= pet.ability1 %></p>
+                        <% } %>
+                        <% if (pet.ability2) { %>
+                            <p><%= pet.ability2 %></p>
+                        <% } %>
+                        <% if (pet.ability3) { %>
+                            <p><%= pet.ability3 %></p>                         
+                        <% } %>                     
+                    </div>
+                </div>
+            </div>
+
+        <% } %>
+         
+    <% }) %>
+</div>

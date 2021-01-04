@@ -1,0 +1,24 @@
+<div class="bg-main-light-blue-grey">
+    <div class="p-8">
+
+        <div class="wow animate__zoomIn text-center mx-auto text-4xl text-main-light-blue-grey bg-main-gray-blue rounded-full py-3 px-6 col-start-1 col-span-1"><b>寵物</b></div>
+
+        <div class="sm:pl-8 w-full grid lg:grid-cols-2 xl:grid-cols-4 gap-4 pt-8 pb-8">
+            <% data.mode.petitem.forEach((pet, i) => { %>
+                <% if (i !== 7) { %>
+                    <a href="gamemodes.html/#<%= pet.id %>"><div data-wow-delay="0.5s" class="wow animate__flipInX text-2xl text-main-t-gray font-bold p-2">● <%= pet.name %> </div></a>
+                <% } %>             
+            <% }) %>
+        </div>
+
+        <div class="wow animate__zoomIn text-center mx-auto text-4xl text-main-light-blue-grey bg-main-gray-blue rounded-full py-3 px-6"><b>飛寵</b></div>
+
+        <div class="sm:pl-8 w-full grid lg:grid-cols-2 xl:grid-cols-4 gap-4 pt-8">
+            <% data.mode.petitem.forEach((pet, i) => { %>
+                <% if (i === 7) { %>
+                    <a href="gamemodes.html/#<%= pet.id %>"><div data-wow-delay="0.5s" class="wow animate__flipInX text-2xl text-main-t-gray font-bold p-2">● <%= pet.name %> </div></a>
+                <% } %>
+            <% }) %>
+        </div>
+    </div>
+</div>
