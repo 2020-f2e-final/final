@@ -5,7 +5,17 @@
                 <div>
                     <a href="maps.html/#<%= s.id %>">
                         <div class="flex justify-center text-3xl text-main-light-blue-grey"><%= s.diff %></div>
-                        <div class="flex justify-center text-2xl text-main-light-blue-grey text-opacity-80"><%= s.star %></div>
+                        <div class="flex justify-center text-2xl text-main-light-blue-grey text-opacity-80">
+                            <% for( let index = 0; index < 5; index++ ) { %>
+                            <div 
+                                class="w-5 h-5 mx-auto bg-main-light-blue-grey star" 
+                                :class="{ 
+                                    'opacity-30': <%= index > i %>,
+                                    'opacity-100': <%= index <= i %>
+                                }"
+                            ></div>
+                            <% } %>
+                        </div>
                     </a>
                 </div>
                 <% }) %>
@@ -15,9 +25,17 @@
                 <div class="mb-80">
                     <div class="grid grid-cols-2 gap-4 lg:grid-cols-3 xl:max-w-screen-xl
                     py-10 mx-auto relative border-t-4 border-b-4 border-main-light-blue-grey">
-                        <p class="text-5xl text-main-light-blue-grey absolute -top-16 mx-auto" id="<%= s.id %>">
-                            <%= s.star %>
-                        </p>
+                        <div class="text-5xl text-main-light-blue-grey absolute -top-16 mx-auto" id="<%= s.id %>">
+                            <% for( let index = 0; index < 5; index++ ) { %>
+                            <div 
+                                class="inline-block w-10 h-10 mr-1 bg-main-light-blue-grey star" 
+                                :class="{ 
+                                    'opacity-30': <%= index > i %>,
+                                    'opacity-100': <%= index <= i %>
+                                }"
+                            ></div>
+                            <% } %>
+                        </div>
                         <% s.maps.forEach((map) => { %>
                             <img data-wow-offset="150" src="images/<%= map.img %>" 
                             class="wow animate__bounceIn" alt="ig: xu_wei_o">
@@ -27,14 +45,18 @@
             <% }) %>
         </div>
     </div>
-    <div x-data="{ difficulty: 0 }" class="lg:hidden">
-        <div class="text-5xl text-main-light-blue-grey grid justify-items-center mt-20">難 度</div>
-        <div class="flex justify-around items-center mt-7">
+    <div class="lg:hidden">
+        <div class="text-5xl text-main-light-blue-grey grid justify-items-center mt-20 tracking-widest">難度</div>
+        <div class="flex items-center my-5">
             <% data.mapStars.forEach((s, i) => { %>
-            <div @click="difficulty = <%= i %>" class="flex items-center justify-center w-8 h-8 text-main-light-blue-grey 
-                cursor-pointer text-5xl md:text-5xl mb-5 md:mb-5">
-                <span x-show="<%= i %> > difficulty">✰</span>
-                <span x-show="<%= i %> <= difficulty">★</span>
+            <div class="w-1/5 text-center cursor-pointer" @click="difficulty = <%= i %>">
+                <span 
+                    class="inline-block w-10 h-10 star bg-main-light-blue-grey"
+                    :class="{ 
+                        'opacity-30': difficulty < <%= i %>,
+                        'opacity-100': difficulty > <%= i %>
+                    }"
+                ></span>
             </div>
             <% }) %> 
         </div>
