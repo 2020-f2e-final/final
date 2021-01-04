@@ -45,7 +45,7 @@
                         <div x-data="lazyGif()" x-cloak class="relative">
                             <img class="2xl:h-72 xl:h-64 lg:h-60 md:h-56 sm:h-48 h-36 w-full" style ="box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.479)" data-src="images/<%= type.tecGif %>" src="images/<%= type.tecGif.replace('.gif', '-preview.jpg') %>" alt="">
                             <div :class="{ hidden: play }" @click="onClick" class="cursor-pointer absolute top-0 left-0 w-full h-full bg-black opacity-50 flex items-center justify-center">
-                                <div class="w-16 h-16 bg-white play"></div>
+                                <div :class="{ 'animate-spin': loading }" class="w-16 h-16 bg-white play"></div>
                             </div>
                         </div>
                     </div>
@@ -92,7 +92,7 @@
                         <div x-data="lazyGif()" x-cloak class="relative">
                             <img class="relative h-64 w-full" style ="box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.479)" data-src="images/<%= type.tecGif %>" src="images/<%= type.tecGif.replace('.gif', '-preview.jpg') %>" alt="">
                             <div :class="{ hidden: play }" @click="onClick" class="cursor-pointer absolute top-0 left-0 w-full h-full bg-black opacity-50 flex items-center justify-center">
-                                <div class="w-16 h-16 bg-white play"></div>
+                                <div :class="{ 'animate-spin': loading }" class="w-16 h-16 bg-white play"></div>
                             </div>
                         </div>
                     </div>
@@ -134,7 +134,7 @@
                             <div x-data="lazyGif()" x-cloak class="relative">
                                 <img class="md:h-56 sm:h-48 h-36 w-full" style ="box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.479)" data-src="images/<%= type.tecGif %>" src="images/<%= type.tecGif.replace('.gif', '-preview.jpg') %>" alt="">
                                 <div :class="{ hidden: play }" @click="onClick" class="cursor-pointer absolute top-0 left-0 w-full h-full bg-black opacity-50 flex items-center justify-center">
-                                    <div class="w-16 h-16 bg-white play"></div>
+                                    <div :class="{ 'animate-spin': loading }" class="w-16 h-16 bg-white play"></div>
                                 </div>
                             </div>
                         </div>
@@ -148,9 +148,14 @@
 function lazyGif () {
     return {
         play: false,
+        loading: false,
         onClick () {
-            this.play = true
+            this.loading = true
             const img = this.$el.querySelector('img')
+            img.onload = () => {
+                this.loading = false
+                this.play = true
+            }
             img.src = img.getAttribute('data-src')
         }
     }
