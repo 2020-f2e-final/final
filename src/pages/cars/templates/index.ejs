@@ -1,5 +1,5 @@
 <div class="w-full overflow-hidden">
-  <div x-data="cars()" x-init="init" class="mt-8 lg:mt-14 mx-auto w-11/12 sm:w-4/5 md:w-2/3 max-w-screen-sm lg:max-w-screen-md lg:px-4">
+  <div x-data="cars()" x-cloak x-init="init" class="mt-8 lg:mt-14 mx-auto w-11/12 sm:w-4/5 md:w-2/3 max-w-screen-sm lg:max-w-screen-md lg:px-4">
     <div class="flex justify-between">
       <% data.carTypes.forEach((type, i) => { %> 
         <p 
