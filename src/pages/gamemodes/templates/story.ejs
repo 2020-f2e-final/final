@@ -28,7 +28,7 @@
     </div>
     <% data.mode.story.forEach((s)=> { %>
         <div class="mb-8 bg-main-light-blue-grey relative">
-            <div class="wow animate__rotateInDownLeft text-main-title-blue text-6xl pt-8 pl-24" id="<%= s.id %>">
+            <div data-wow-delay="0.5s" class="wow animate__rotateInDownLeft text-main-title-blue text-6xl pt-8 pl-24" id="<%= s.id %>">
                 <b><i><%= s.typeName %></i></b>
             </div>
             <div class="w-4/5 mx-auto">
@@ -37,9 +37,9 @@
         
             <div class="flex flex-wrap justify-center">
 
-                <div data-wow-delay="0.5s" class="wow animate__rubberBand mx-auto p-8"><img src="images/<%= s.Img %> " alt="" /></div>
+                <div class="wow animate__rubberBand mx-auto p-8"><img src="images/<%= s.Img %> " alt="" /></div>
                 
-                <div data-wow-delay="1s" class="wow animate__zoomIn text-main-title-blue text-3xl w-2/3 lg:w-1/2 xl:w-1/2 mx-auto pb-10 pt-8 justify-items-center">
+                <div data-wow-delay="0.5s" class="wow animate__zoomIn text-main-title-blue text-3xl w-2/3 lg:w-1/2 xl:w-1/2 mx-auto pb-10 pt-8 justify-items-center">
                     <%= s.intro %>
                 </div>
             </div>
