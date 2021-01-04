@@ -28,6 +28,7 @@ function bindHashAnchors () {
       const id = a.href.split('#')[1]
       a.onclick = (e) => {
         e.preventDefault()
+        console.log(id)
         scrollToElementById(id)
       }
     })
