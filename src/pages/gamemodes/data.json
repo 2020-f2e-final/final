@@ -289,47 +289,56 @@
             {
                 "typeName":"青銅車手",
                 "intro":"3個小段位",
-                "Img":"rank1.png"
+                "Img":"rank1.png",
+                "sty":"3px 3px 0px rgba(0, 0, 0)"
             },
             {
                 "typeName":"白銀車手",
                 "intro":"3個小段位",
-                "Img":"rank2.png"
+                "Img":"rank2.png",
+                "sty":"0px 3px 0px rgba(0, 0, 0)"
             },
             {
                 "typeName":"黃金車手",
                 "intro":"3個小段位",
-                "Img":"rank3.png"
+                "Img":"rank3.png",
+                "sty":"-3px 3px 0px rgba(0, 0, 0)"
             },
             {
                 "typeName":"鉑金車手",
                 "intro":"3個小段位",
-                "Img":"rank4.png"
+                "Img":"rank4.png",
+                "sty":"3px 0px 0px rgba(0, 0, 0)"
             },
             {
                 "typeName":"鑽石車手",
                 "intro":"5個小段位",
-                "Img":"rank5.png"
+                "Img":"rank5.png",
+                "sty":"0px 0px 0px rgba(0, 0, 0)"
             },
             {
                 "typeName":"大師車手",
                 "intro":"5個小段位",
-                "Img":"rank6.png"
+                "Img":"rank6.png",
+                "sty":"-3px 0px 0px rgba(0, 0, 0)"
             },
             {
                 "typeName":"王者車手",
                 "intro":"5個小段位",
-                "Img":"rank7.png"
+                "Img":"rank7.png",
+                "sty":"3px -3px 0px rgba(0, 0, 0)"
             },
             {
                 "typeName":"傳奇車王",
                 "intro":"無小段位限制",
-                "Img":"rank8.png"
+                "Img":"rank8.png",
+                "sty":"0px -3px 0px rgba(0, 0, 0)"
             },
             {
                 "typeName":"不朽車神",
                 "intro":"前100名獲得",
-                "Img":"rank9.png"
+                "Img":"rank9.png",
+                "sty":"3px 3px 0px rgba(0, 0, 0) inset"
             }
         ]
     }   

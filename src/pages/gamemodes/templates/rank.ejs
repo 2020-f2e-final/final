@@ -52,9 +52,66 @@
 
             <div>
                 <div class="hidden lg:block pb-12">
-                    <div class="grid justify-items-stretch">
-                        <div class="justify-self-center"><Img src="images/rank.png" alt=""></div>
+                    <div class="wow animate__zoomIn bg-no-repeat bg-center flex justify-center" style="background-image: url('images/rank-bg.png')">
+                        <div class="grid grid-cols-3 gap-x-7 gap-y-1 pb-5">
+                            <% data.mode.rank.forEach((rank, r) => { %>
+                                <div class="grid justify-center">
+                                    <div class="p-2 mx-auto">
+                                        <div data-wow-delay="0.5s" class="wow animate__tada"><img src="images/<%= rank.Img %> " alt="" ></div><!-- style="box-shadow: 2px 2px 0px rgba(0, 0, 0)">-->
+                                        <% if (r === 0) { %>
+                                            <div class="bg-main-m-yellow" style="box-shadow: 3px 3px 0px rgba(0, 0, 0)" >
+                                                <p data-wow-delay="0.5s" class="wow animate__heartBeat text-3xl text-center text-main-title-blue font-semibold"><%= rank.typeName %> </p>
+                                                <p class="text-3xl text-center text-main-title-blue font-semibold"><%= rank.intro %> </p>
+                                            </div>
+                                        <% } else if (r === 1) { %>
+                                            <div class="bg-main-m-yellow" style="box-shadow: 0px 3px 0px rgba(0, 0, 0)" >
+                                                <p data-wow-delay="0.5s" class="wow animate__heartBeat text-3xl text-center text-main-title-blue font-semibold"><%= rank.typeName %> </p>
+                                                <p class="text-3xl text-center text-main-title-blue font-semibold"><%= rank.intro %> </p>
+                                            </div>
+                                        <% } else if (r === 2) { %>
+                                            <div class="bg-main-m-yellow" style="box-shadow: -3px 3px 0px rgba(0, 0, 0)" >
+                                                <p data-wow-delay="0.5s" class="wow animate__heartBeat text-3xl text-center text-main-title-blue font-semibold"><%= rank.typeName %> </p>
+                                                <p class="text-3xl text-center text-main-title-blue font-semibold"><%= rank.intro %> </p>
+                                            </div>
+                                        <% } else if (r === 3) { %>
+                                            <div class="bg-main-m-yellow" style="box-shadow: 3px 0px 0px rgba(0, 0, 0)" >
+                                                <p data-wow-delay="0.5s" class="wow animate__heartBeat text-3xl text-center text-main-title-blue font-semibold"><%= rank.typeName %> </p>
+                                                <p class="text-3xl text-center text-main-title-blue font-semibold"><%= rank.intro %> </p>
+                                            </div>
+                                        <% } else if (r === 4) { %>
+                                            <div class="bg-main-m-yellow" style="box-shadow: 0px 0px 0px rgba(0, 0, 0)" >
+                                                <p data-wow-delay="0.5s" class="wow animate__heartBeat text-3xl text-center text-main-title-blue font-semibold"><%= rank.typeName %> </p>
+                                                <p class="text-3xl text-center text-main-title-blue font-semibold"><%= rank.intro %> </p>
+                                            </div>
+                                        <% } else if (r === 5) { %>
+                                            <div class="bg-main-m-yellow" style="box-shadow: -3px 0px 0px rgba(0, 0, 0)" >
+                                                <p data-wow-delay="0.5s" class="wow animate__heartBeat text-3xl text-center text-main-title-blue font-semibold"><%= rank.typeName %> </p>
+                                                <p class="text-3xl text-center text-main-title-blue font-semibold"><%= rank.intro %> </p>
+                                            </div>
+                                        <% } else if (r === 6) { %>
+                                            <div class="bg-main-m-yellow" style="box-shadow: 3px -3px 0px rgba(0, 0, 0)" >
+                                                <p data-wow-delay="0.5s" class="wow animate__heartBeat text-3xl text-center text-main-title-blue font-semibold"><%= rank.typeName %> </p>
+                                                <p class="text-3xl text-center text-main-title-blue font-semibold"><%= rank.intro %> </p>
+                                            </div>
+                                        <% } else if (r === 7) { %>
+                                            <div class="bg-main-m-yellow" style="box-shadow: 0px -3px 0px rgba(0, 0, 0)" >
+                                                <p data-wow-delay="0.5s" class="wow animate__heartBeat text-3xl text-center text-main-title-blue font-semibold"><%= rank.typeName %> </p>
+                                                <p class="text-3xl text-center text-main-title-blue font-semibold"><%= rank.intro %> </p>
+                                            </div>
+                                        <% } else if (r === 8) { %>
+                                            <div class="bg-main-m-yellow" style="box-shadow: 3px 3px 0px rgba(0, 0, 0) inset" >
+                                                <p data-wow-delay="0.5s" class="wow animate__heartBeat text-3xl text-center text-main-title-blue font-semibold"><%= rank.typeName %> </p>
+                                                <p class="text-3xl text-center text-main-title-blue font-semibold"><%= rank.intro %> </p>
+                                            </div>                                         
+                                        <% } %>
+                                    </div>    
+                                </div>
+                            <% }) %>
+                        </div>
                     </div>
+                    <!-- <div class="grid justify-items-stretch">
+                        <div class="justify-self-center"><Img src="images/rank.png" alt=""></div>
+                    </div> -->
                 </div>
                 <div class="lg:hidden pb-12 flex justify-center">
                     <div class="w-4/5 mx-auto">
