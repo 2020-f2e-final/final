@@ -132,7 +132,7 @@
 
     "licenceTypes":[
         {
-            "typeId":"one",
+            "typeId":"oneone",
             "typeName":"初級",
             "typename":"初級駕照",
             "typeImg":"初級駕照.png",
@@ -189,7 +189,7 @@
             
         },
         {
-            "typeId":"two",
+            "typeId":"twotwo",
             "typeName":"L3",
             "typename":"L3駕照",
             "typeImg":"中級駕照.png",
@@ -245,7 +245,7 @@
                     ]
         },
         {
-            "typeId":"three",
+            "typeId":"threethree",
             "typeName":"L2",
             "typename":"L2駕照",
             "typeImg":"高級駕照.png",
@@ -301,7 +301,7 @@
                     ]
         },
         {
-            "typeId":"four",
+            "typeId":"fourfour",
             "typeName":"L1",
             "typename":"L1駕照",
             "typeImg":"頂級駕照.png",
