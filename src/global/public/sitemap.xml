@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns=" http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://2020-f2e-final.github.io/final/index.html</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://2020-f2e-final.github.io/final/characters.html</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://2020-f2e-final.github.io/final/cars.html</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://2020-f2e-final.github.io/final/gamemodes.html</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://2020-f2e-final.github.io/final/techniques.html</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://2020-f2e-final.github.io/final/level.html</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://2020-f2e-final.github.io/final/maps.html</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://2020-f2e-final.github.io/final/home-system.html</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+</urlset>
