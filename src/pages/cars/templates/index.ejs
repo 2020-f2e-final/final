@@ -1,12 +1,14 @@
 <div class="w-full overflow-hidden">
   <div x-data="cars()" x-cloak x-init="init" class="mt-8 lg:mt-14 mx-auto w-11/12 sm:w-4/5 md:w-2/3 max-w-screen-sm lg:max-w-screen-md lg:px-4">
-    <div class="flex justify-between">
+    <div class="flex justify-between items-end">
       <% data.carTypes.forEach((type, i) => { %> 
         <p 
           x-on:click="selected = <%= i %>" 
-          class="cursor-pointer text-main-light-blue-grey text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-medium lg:font-bold tracking-wider"
+          class="cursor-pointer text-main-light-blue-grey sm:text-6xl md:text-7xl lg:text-8xl font-medium lg:font-bold tracking-wider"
           :class="{
-            'opacity-30': selected !== <%= i %>
+            'opacity-30': selected !== <%= i %>,
+            'text-4xl': selected !== <%= i %>,
+            'text-5xl': selected === <%= i %>
           }"
         >
           <%= type.typeName %>
