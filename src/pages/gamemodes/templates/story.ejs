@@ -12,7 +12,7 @@
             <div class="flex flex-wrap justify-evenly">
                 <div class="wow animate__zoomIn text-3xl text-main-title-blue p-8">故事模式除了常規的競速賽、道具賽和無限加速外，還包含限時賽、淘汰賽、追擊賽、逃脫賽、時間挑戰賽、收集賽、鑽門模式、清障模式等特有玩法。</div>
             </div>
-            <div class="grid grid-cols-2 gap-4 pt-8 pb-8 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-5  justify-items-center">
+            <div class="grid grid-cols-2 gap-4 pt-8 pb-8 xl:grid-cols-5 justify-items-center">
                 <% data.mode.story.forEach((s)=> { %>
                     <a href="gamemodes.html/#<%= s.id %>"><div data-wow-delay="0.5s" class="wow animate__flipInX text-2xl text-main-t-gray p-2">● <%= s.typeName %></div></a>
                 <% }) %>
