@@ -4,7 +4,8 @@
             <div class="text-white font-light pt-16">
                 <div class="bg-main-light-blue-grey pr-5 sm:pr-36 pb-4 sm:pb-8">
                     <div class="flex justify-start items-end pl-5 sm:pl-10 lg:pl-20 pr-8 py-2 sm:py-5">
-                        <p class="text-2xl sm:text-5xl text-main-role-name font-normal pr-5 sm:pr-8">
+                        <p class="text-2xl sm:text-5xl text-main-role-name font-normal pr-5 sm:pr-8
+                        wow animate__fadeIn" data-wow-offset="200">
                             <%= character.name %>
                         </p>
                         <% if (character.rarity === 1) { %>
@@ -24,14 +25,16 @@
                         <% } %>
                     </div>
                     <div class="flex justify-start bg-main-role-gray pr-4 sm:pr-28">
-                        <div class="text-sm sm:text-xl lg:text-2xl pl-5 sm:pl-10 lg:pl-20 py-3">
+                        <div class="text-sm sm:text-xl lg:text-2xl pl-5 sm:pl-10 lg:pl-20 py-3
+                        wow animate__fadeIn" data-wow-offset="300" >
                             <p class="py-1"><%= character.birth %></p>
                             <p class="py-1 pb-10"><%= character.temp %></p>
                             <p class="py-1 leading-loose"><%= character.intro %></p>
                         </div>
                     </div>
                 </div>
-                <div class="flex justify-start pl-5 sm:pl-10 lg:pl-20 py-3 pr-2 sm:pr-48 md:pr-56 lg:pr-0">
+                <div class="flex justify-start pl-5 sm:pl-10 lg:pl-20 py-3 pr-2 sm:pr-48 md:pr-56 lg:pr-0
+                wow animate__fadeIn" data-wow-offset="100" >
                     <p class="leading-relaxed sm:leading-loose pr-3 pt-0 pb-1 sm:pb-0 text-xs sm:text-xl lg:text-2xl">
                         ◆
                     </p>
@@ -58,7 +61,8 @@
             <div class="text-white font-light pt-16">
                 <div class="bg-main-light-blue-grey pl-4 sm:pl-20 md:pl-36 pb-4 sm:pb-8">
                     <div class="flex justify-end lg:justify-start items-end pl-2 sm:pl-44 pr-3 lg:pr-8 py-2 sm:py-5">
-                        <p class="text-2xl sm:text-5xl text-main-role-name font-normal sm:pr-8">
+                        <p class="text-2xl sm:text-5xl text-main-role-name font-normal sm:pr-8
+                        wow animate__fadeIn" data-wow-offset="200">
                             <%= character.name %>
                         </p>
                         <% if (character.rarity === 1) { %>
@@ -79,14 +83,16 @@
                         <% } %>
                     </div>
                     <div class="flex justify-end sm:justify-start bg-main-role-gray pl-4 pr-4 lg:pr-20" >
-                        <div class="text-sm sm:text-xl lg:text-2xl sm:pl-44 py-3">
+                        <div class="text-sm sm:text-xl lg:text-2xl sm:pl-44 py-3
+                        wow animate__fadeIn" data-wow-offset="300" >
                             <p class="py-1 text-right sm:text-left"><%= character.birth %></p>
                             <p class="py-1 pb-10 text-right sm:text-left"><%= character.temp %></p>
                             <p class="py-1 leading-loose"><%= character.intro %></p>
                         </div>
                     </div>
                 </div>
-                <div class="flex justify-start pl-9 sm:pl-64 md:pl-80 my-3 pr-5">
+                <div class="flex justify-start pl-9 sm:pl-64 md:pl-80 my-3 pr-5
+                 wow animate__fadeIn" data-wow-offset="100" >
                     <p class="\leading-relaxed sm:leading-loose pr-3 pt-0 pb-1 sm:pb-0 text-xs sm:text-xl lg:text-2xl">◆</p>
                     <p class="flex items-center leading-relaxed sm:leading-loose text-sm sm:text-xl lg:text-2xl">
                         <%= character.bonus %>
