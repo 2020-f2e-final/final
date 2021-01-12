@@ -1,7 +1,7 @@
 <div class="mx-auto w-11/12">
     <br/>
     <br/>
-    <div x-data="{ tab: 'level' }" x-cloak>
+    <div x-data="level()" x-cloak x-init="init">
         <div class="flex w-full">
             <div class="relative w-1/2 font-medium cursor-pointer hover:text-main-levelTitle-light lg:text-6xl sm:text-5xl text-4xl" 
             :class="{'text-main-levelTitle-light': tab ==='level' ,'text-main-levelTitle-dark': tab !=='level', ' text-opacity-75': tab !=='level' }" 
@@ -19,3 +19,20 @@
         </div>
     </div>
 </div>
+<script>
+    function level () {
+      return {
+        tab: 'level',
+        init () {
+          this.$watch('tab', () => this.resetWOW())
+        },
+        resetWOW () {
+          wow.init()
+          this.$nextTick(() => {
+            window.scrollTo(0, 1)
+            window.scrollTo(0, 0)
+          })
+        }
+      }
+    }
+  </script>
