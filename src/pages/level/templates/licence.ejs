@@ -4,7 +4,7 @@
         </div>
         <div class="flex w-1/2">
             <% data.licenceTypes.forEach((type) =>{%>
-                <div class="md:w-1/5 m:w-1/6 w-1/4 lg:text-3xl md:text-2xl sm:text-xl text-lg text-white cursor-pointer hover:text-main-levelTitle-dark"><a href="level.html/#<%= type.typeId %>"><%= type.typeName %></a></div>
+                <div class="md:w-1/5 m:w-1/6 w-1/4 lg:text-3xl md:text-2xl sm:text-xl text-lg text-white cursor-pointer hover:text-main-levelTitle-dark wow animate__rotateIn"><a href="level.html/#<%= type.typeId %>"><%= type.typeName %></a></div>
                 <% }) %> 
         </div>
     </div>
@@ -12,7 +12,7 @@
     <% data.licenceTypes.forEach((type, i) => { %>
         <div id="<%= type.typeId %>">
             <div class="mt-14">
-                <div class="mb-7 relative left-2 lg:text-5xl sm:text-4xl text-2xl text-white underline"><%= type.typename %></div>
+                <div data-wow-delay="0.5s" class="mb-7 relative left-2 lg:text-5xl sm:text-4xl text-2xl text-white underline wow animate__lightSpeedInRight"><%= type.typename %></div>
             </div>
             <div class="flex flex-wrap justify-center">
                     <div class="sm:flex hidden lg:w-11/12 w-full relative xl:py-10 lg:py-14 md:py-8 sm:py-5 py-2 xl:mb-24 mb-16 xl:h-72 lg:h-60 md:h-40 sm:h-32 h-16">
@@ -23,17 +23,17 @@
                                     <div class="flex w-1/2 xl:my-2 my-0">
                                         <div class="rounded-full md:h-3 md:w-3 h-2 w-2 my-auto mx-2 bg-white">
                                         </div>
-                                        <div class="text-white xl:text-3xl lg:text-2xl md:text-lg sm:text-sm md:font-normal sm:font-light"><a href="level.html/#<%= mission.id %>"><%= mission.title %></a></div>
+                                        <div data-wow-delay="1.5s" class="text-white xl:text-3xl lg:text-2xl md:text-lg sm:text-sm md:font-normal sm:font-light wow animate__shakeX"><a href="level.html/#<%= mission.id %>"><%= mission.title %></a></div>
                                     </div>
                                 <% }) %>
                             </div>
                         </div>
                         <div class="absolute left-0 top-0 w-1/2">
-                            <img class="xl:h-80 lg::h-72 w-full" src="images/<%= type.typeImg %> " alt="">
+                            <img data-wow-delay="0.5s" class="wow animate__jackInTheBox xl:h-80 lg::h-72 w-full" src="images/<%= type.typeImg %> " alt="">
                         </div>
                     </div>
                     <div class="sm:hidden w-full">
-                        <div class="w-1/2"><img class="w-full" src="images/<%= type.typeImg %> " alt=""></div>
+                        <div class="w-1/2"><img data-wow-delay="0.5s" class="w-full wow animate__jackInTheBox" src="images/<%= type.typeImg %> " alt=""></div>
                         <div class="flex justify-center">
                             <div class="w-11/12  rounded-md bg-main-faded-blue h-full flex item-center">
                                 <div class="flex flex-wrap w-full">
@@ -50,7 +50,7 @@
                     </div>
                     <% type.mission.forEach((mission, i) => { %>
                         <% if(i % 2 == 0){ %>
-                            <div id="<%= mission.id %>" class="lg:w-10/12 sm:w-11/12 w-full relative py-12 xl:pr-96 lg:pr-56 md:pr-44 sm:pr-36 mb-8">
+                            <div id="<%= mission.id %>" data-wow-delay="0.5s" class="wow animate__fadeInRight lg:w-10/12 sm:w-11/12 w-full relative py-12 xl:pr-96 lg:pr-56 md:pr-44 sm:pr-36 mb-8">
                                 <div class="bg-main-light-blue-grey xl:h-48 lg:h-36 md:h-24 h-20 flex items-center">
                                     <div class="">
                                         <div class="flex items-center">
@@ -67,7 +67,7 @@
                                 </div>
                                 <div class="absolute lg:top-2 md:top-5 sm:top-7 top-5 left-0 sm:w-1/2 w-full xl:h-14 lg:h-12 md:h-8 sm:h-6 h-8">
                                     <div class="bg-main-missionTitle xl:h-16 lg:h-12 md:h-8 sm:h-6 h-8 xl:w-80 lg:w-72 md:w-60 sm:w-48 w-3/5 transform -rotate-3 mx-auto flex items-center" style ="box-shadow: 2px 2px 6px 4px rgba(0, 0, 0, 0.479)">
-                                        <p class="text-main-levelText lg:text-3xl md:text-2xl sm:text-xl font-medium mx-auto"><%= mission.title%> </p>
+                                        <p data-wow-delay="1s" class="text-main-levelText lg:text-3xl md:text-2xl sm:text-xl font-medium mx-auto wow animate__fadeIn"><%= mission.title%> </p>
                                     </div>
                                 </div>
                                 <div class="sm:absolute top-0 right-0 md:w-1/2 sm:w-5/12 sm:mt-0 mt-4 flex sm:justify-end justify-center">
@@ -75,7 +75,7 @@
                                 </div>
                             </div>
                         <% } else{ %>  
-                            <div id="<%= mission.id %>" class="lg:w-10/12 sm:w-11/12 w-full relative py-12 2xl:pl-96 xl:pl-80 lg:pl-60 md:pl-14 sm:pl-10 sm:mb-8">
+                            <div id="<%= mission.id %>" data-wow-delay="0.5s" class="wow animate__fadeInLeft lg:w-10/12 sm:w-11/12 w-full relative py-12 2xl:pl-96 xl:pl-80 lg:pl-60 md:pl-14 sm:pl-10 sm:mb-8">
                                 <div class="bg-main-light-blue-grey xl:h-48 lg:h-36 md:h-24 h-20 flex items-center sm:justify-end">
                                     <div class="2xl:w-4/5 xl:w-5/6 lg:w-3/4 md:w-1/2 sm:w-3/5">
                                         <div class="flex items-center">
@@ -92,7 +92,7 @@
                                 </div>
                                 <div class="absolute lg:top-2 md:top-5 sm:top-7 top-5 right-0 sm:w-1/2 w-full xl:h-14 lg:h-12 md:h-8 sm:h-6 h-8">
                                     <div class="bg-main-missionTitle xl:h-16 lg:h-12 md:h-8 sm:h-6 h-8 xl:w-80 lg:w-72 md:w-60 sm:w-48 w-3/5 transform -rotate-3 mx-auto flex items-center" style ="box-shadow: 2px 2px 6px 4px rgba(0, 0, 0, 0.479)">
-                                        <p class="text-main-levelText lg:text-3xl md:text-2xl sm:text-xl font-medium mx-auto"><%= mission.title%> </p>
+                                        <p data-wow-delay="1s" class="text-main-levelText lg:text-3xl md:text-2xl sm:text-xl font-medium mx-auto wow animate__fadeIn"><%= mission.title%> </p>
                                     </div>
                                 </div>
                                 <div class="sm:absolute top-0 left-0 md:w-1/2 sm:w-5/12 sm:mt-0 mt-4 flex sm:justify-start justify-center">
